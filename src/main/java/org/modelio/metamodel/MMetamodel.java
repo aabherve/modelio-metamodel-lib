@@ -1,22 +1,3 @@
-/**
-
-Copyright 2015 Softeam
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-
-**/
-
-
 package org.modelio.metamodel;
 
 import java.util.ArrayList;
@@ -24,15 +5,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
-
-
-
 /**
  * Metamodel of Modleio 3.4.1 Tool
  * Class generated with  ModelioMetaGenerator 1.0.0 Tool
  *
- * @author Antonin Abhervé
+ * @author Antonin Abherv?
  */
 public class MMetamodel {
     private List<MPackage> mPackages;
@@ -46,6 +23,7 @@ public class MMetamodel {
         this.mPackages = new ArrayList<MPackage>();
         this.mClass = new HashMap<>();
         initBaseTypes();
+        initEnum();
         initClass();
         initGeneralizations();
         initDependencys();
@@ -74,11 +52,11 @@ public class MMetamodel {
 
         MClass id_47b29e94ef894e19b7a979c93ef077b9 = new MClass("47b29e94-ef89-4e19-b7a9-79c93ef077b9","AnalystItem","47b29e94-ef89-4e19-b7a9-79c93ef077b9.exml");
         id_00d00f24000001a90000000000000000.getMClass().add(id_47b29e94ef894e19b7a979c93ef077b9);
-        this.mClass.put("AnalystItem",id_47b29e94ef894e19b7a979c93ef077b9);// attribute Definition
+        this.mClass.put("AnalystItem",id_47b29e94ef894e19b7a979c93ef077b9);
+        // attribute Definition
 
         MAttribute id_00080b0800001bd90000000000000000 = new MAttribute("00080b08-0000-1bd9-0000-000000000000","Definition","47b29e94-ef89-4e19-b7a9-79c93ef077b9.exml",this.mBaseTypes.get("string"),false,true,false);
         id_47b29e94ef894e19b7a979c93ef077b9.getMAttributes().add(id_00080b0800001bd90000000000000000);
-
 
 
 
@@ -86,11 +64,11 @@ public class MMetamodel {
 
         MClass id_00080b08000018640000000000000000 = new MClass("00080b08-0000-1864-0000-000000000000","AnalystElement","00080b08-0000-1864-0000-000000000000.exml");
         id_00d00f24000001a90000000000000000.getMClass().add(id_00080b08000018640000000000000000);
-        this.mClass.put("AnalystElement",id_00080b08000018640000000000000000);// attribute Version
+        this.mClass.put("AnalystElement",id_00080b08000018640000000000000000);
+        // attribute Version
 
         MAttribute id_7ed667c3bea142fbbfd02893e190094f = new MAttribute("7ed667c3-bea1-42fb-bfd0-2893e190094f","Version","00080b08-0000-1864-0000-000000000000.exml",this.mBaseTypes.get("integer"),false,true,false);
         id_00080b08000018640000000000000000.getMAttributes().add(id_7ed667c3bea142fbbfd02893e190094f);
-
 
 
 
@@ -202,11 +180,11 @@ public class MMetamodel {
 
         MClass id_7f76549418d611e09cf7001ec947ccaf = new MClass("7f765494-18d6-11e0-9cf7-001ec947ccaf","BpmnCollaboration","7f765494-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20b18d611e09cf7001ec947ccaf.getMClass().add(id_7f76549418d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnCollaboration",id_7f76549418d611e09cf7001ec947ccaf);// attribute IsClosed
+        this.mClass.put("BpmnCollaboration",id_7f76549418d611e09cf7001ec947ccaf);
+        // attribute IsClosed
 
         MAttribute id_7f7654d818d611e09cf7001ec947ccaf = new MAttribute("7f7654d8-18d6-11e0-9cf7-001ec947ccaf","IsClosed","7f765494-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_7f76549418d611e09cf7001ec947ccaf.getMAttributes().add(id_7f7654d818d611e09cf7001ec947ccaf);
-
 
 
 
@@ -226,7 +204,8 @@ public class MMetamodel {
 
         MClass id_7f76547d18d611e09cf7001ec947ccaf = new MClass("7f76547d-18d6-11e0-9cf7-001ec947ccaf","BpmnParticipant","7f76547d-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20b18d611e09cf7001ec947ccaf.getMClass().add(id_7f76547d18d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnParticipant",id_7f76547d18d611e09cf7001ec947ccaf);// attribute MultiplicityMin
+        this.mClass.put("BpmnParticipant",id_7f76547d18d611e09cf7001ec947ccaf);
+        // attribute MultiplicityMin
 
         MAttribute id_7f7654d518d611e09cf7001ec947ccaf = new MAttribute("7f7654d5-18d6-11e0-9cf7-001ec947ccaf","MultiplicityMin","7f76547d-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("integer"),false,true,false);
         id_7f76547d18d611e09cf7001ec947ccaf.getMAttributes().add(id_7f7654d518d611e09cf7001ec947ccaf);
@@ -239,12 +218,12 @@ public class MMetamodel {
 
 
 
-
         //## class BpmnProcess ##
 
         MClass id_7f76547e18d611e09cf7001ec947ccaf = new MClass("7f76547e-18d6-11e0-9cf7-001ec947ccaf","BpmnProcess","7f76547e-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20b18d611e09cf7001ec947ccaf.getMClass().add(id_7f76547e18d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnProcess",id_7f76547e18d611e09cf7001ec947ccaf);// attribute ProcessType
+        this.mClass.put("BpmnProcess",id_7f76547e18d611e09cf7001ec947ccaf);
+        // attribute ProcessType
 
         MAttribute id_7f76553b18d611e09cf7001ec947ccaf = new MAttribute("7f76553b-18d6-11e0-9cf7-001ec947ccaf","ProcessType","7f76547e-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("BpmnProcessType"),false,true,false);
         id_7f76547e18d611e09cf7001ec947ccaf.getMAttributes().add(id_7f76553b18d611e09cf7001ec947ccaf);
@@ -265,7 +244,6 @@ public class MMetamodel {
 
 
 
-
         //##### Package rootElements#####
         MPackage id_7f73f20c18d611e09cf7001ec947ccaf = new MPackage("7f73f20c-18d6-11e0-9cf7-001ec947ccaf","rootElements","7f73f20c-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_9730153a082911e09123001ec947ccaf.getMPackages().add(id_7f73f20c18d611e09cf7001ec947ccaf);
@@ -273,11 +251,11 @@ public class MMetamodel {
 
         MClass id_7f76547018d611e09cf7001ec947ccaf = new MClass("7f765470-18d6-11e0-9cf7-001ec947ccaf","BpmnAssociation","7f765470-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20c18d611e09cf7001ec947ccaf.getMClass().add(id_7f76547018d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnAssociation",id_7f76547018d611e09cf7001ec947ccaf);// attribute AssociationDirection
+        this.mClass.put("BpmnAssociation",id_7f76547018d611e09cf7001ec947ccaf);
+        // attribute AssociationDirection
 
         MAttribute id_7f76552918d611e09cf7001ec947ccaf = new MAttribute("7f765529-18d6-11e0-9cf7-001ec947ccaf","AssociationDirection","7f765470-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("BpmnAssociationDirection"),false,true,false);
         id_7f76547018d611e09cf7001ec947ccaf.getMAttributes().add(id_7f76552918d611e09cf7001ec947ccaf);
-
 
 
 
@@ -309,11 +287,11 @@ public class MMetamodel {
 
         MClass id_7f76549a18d611e09cf7001ec947ccaf = new MClass("7f76549a-18d6-11e0-9cf7-001ec947ccaf","BpmnGroup","7f76549a-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20c18d611e09cf7001ec947ccaf.getMClass().add(id_7f76549a18d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnGroup",id_7f76549a18d611e09cf7001ec947ccaf);// attribute Category
+        this.mClass.put("BpmnGroup",id_7f76549a18d611e09cf7001ec947ccaf);
+        // attribute Category
 
         MAttribute id_7f78b73118d611e09cf7001ec947ccaf = new MAttribute("7f78b731-18d6-11e0-9cf7-001ec947ccaf","Category","7f76549a-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_7f76549a18d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b73118d611e09cf7001ec947ccaf);
-
 
 
 
@@ -350,7 +328,8 @@ public class MMetamodel {
 
         MClass id_7f76549118d611e09cf7001ec947ccaf = new MClass("7f765491-18d6-11e0-9cf7-001ec947ccaf","BpmnSequenceFlow","7f765491-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20d18d611e09cf7001ec947ccaf.getMClass().add(id_7f76549118d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnSequenceFlow",id_7f76549118d611e09cf7001ec947ccaf);// attribute IsImmediate
+        this.mClass.put("BpmnSequenceFlow",id_7f76549118d611e09cf7001ec947ccaf);
+        // attribute IsImmediate
 
         MAttribute id_7f78b77c18d611e09cf7001ec947ccaf = new MAttribute("7f78b77c-18d6-11e0-9cf7-001ec947ccaf","IsImmediate","7f765491-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_7f76549118d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b77c18d611e09cf7001ec947ccaf);
@@ -365,7 +344,6 @@ public class MMetamodel {
 
 
 
-
         //##### Package activities#####
         MPackage id_7f73f20e18d611e09cf7001ec947ccaf = new MPackage("7f73f20e-18d6-11e0-9cf7-001ec947ccaf","activities","7f73f20e-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_9730153a082911e09123001ec947ccaf.getMPackages().add(id_7f73f20e18d611e09cf7001ec947ccaf);
@@ -373,7 +351,8 @@ public class MMetamodel {
 
         MClass id_7f76548818d611e09cf7001ec947ccaf = new MClass("7f765488-18d6-11e0-9cf7-001ec947ccaf","BpmnActivity","7f765488-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20e18d611e09cf7001ec947ccaf.getMClass().add(id_7f76548818d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnActivity",id_7f76548818d611e09cf7001ec947ccaf);// attribute IsForCompensation
+        this.mClass.put("BpmnActivity",id_7f76548818d611e09cf7001ec947ccaf);
+        // attribute IsForCompensation
 
         MAttribute id_7f78b77b18d611e09cf7001ec947ccaf = new MAttribute("7f78b77b-18d6-11e0-9cf7-001ec947ccaf","IsForCompensation","7f765488-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_7f76548818d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b77b18d611e09cf7001ec947ccaf);
@@ -392,12 +371,12 @@ public class MMetamodel {
 
 
 
-
         //## class BpmnAdHocSubProcess ##
 
         MClass id_7f76548a18d611e09cf7001ec947ccaf = new MClass("7f76548a-18d6-11e0-9cf7-001ec947ccaf","BpmnAdHocSubProcess","7f76548a-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20e18d611e09cf7001ec947ccaf.getMClass().add(id_7f76548a18d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnAdHocSubProcess",id_7f76548a18d611e09cf7001ec947ccaf);// attribute Ordering
+        this.mClass.put("BpmnAdHocSubProcess",id_7f76548a18d611e09cf7001ec947ccaf);
+        // attribute Ordering
 
         MAttribute id_7f78b76518d611e09cf7001ec947ccaf = new MAttribute("7f78b765-18d6-11e0-9cf7-001ec947ccaf","Ordering","7f76548a-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("AdHocOrdering"),false,true,false);
         id_7f76548a18d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b76518d611e09cf7001ec947ccaf);
@@ -413,7 +392,6 @@ public class MMetamodel {
 
         MAttribute id_7f78b76718d611e09cf7001ec947ccaf = new MAttribute("7f78b767-18d6-11e0-9cf7-001ec947ccaf","CompletionCondition","7f76548a-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_7f76548a18d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b76718d611e09cf7001ec947ccaf);
-
 
 
 
@@ -433,11 +411,11 @@ public class MMetamodel {
 
         MClass id_7f76548d18d611e09cf7001ec947ccaf = new MClass("7f76548d-18d6-11e0-9cf7-001ec947ccaf","BpmnComplexBehaviorDefinition","7f76548d-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20e18d611e09cf7001ec947ccaf.getMClass().add(id_7f76548d18d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnComplexBehaviorDefinition",id_7f76548d18d611e09cf7001ec947ccaf);// attribute Condition
+        this.mClass.put("BpmnComplexBehaviorDefinition",id_7f76548d18d611e09cf7001ec947ccaf);
+        // attribute Condition
 
         MAttribute id_7f78b7a418d611e09cf7001ec947ccaf = new MAttribute("7f78b7a4-18d6-11e0-9cf7-001ec947ccaf","Condition","7f76548d-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_7f76548d18d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b7a418d611e09cf7001ec947ccaf);
-
 
 
 
@@ -457,7 +435,8 @@ public class MMetamodel {
 
         MClass id_7f76547618d611e09cf7001ec947ccaf = new MClass("7f765476-18d6-11e0-9cf7-001ec947ccaf","BpmnMultiInstanceLoopCharacteristics","7f765476-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20e18d611e09cf7001ec947ccaf.getMClass().add(id_7f76547618d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnMultiInstanceLoopCharacteristics",id_7f76547618d611e09cf7001ec947ccaf);// attribute IsSequencial
+        this.mClass.put("BpmnMultiInstanceLoopCharacteristics",id_7f76547618d611e09cf7001ec947ccaf);
+        // attribute IsSequencial
 
         MAttribute id_7f78b76018d611e09cf7001ec947ccaf = new MAttribute("7f78b760-18d6-11e0-9cf7-001ec947ccaf","IsSequencial","7f765476-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_7f76547618d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b76018d611e09cf7001ec947ccaf);
@@ -482,12 +461,12 @@ public class MMetamodel {
 
 
 
-
         //## class BpmnReceiveTask ##
 
         MClass id_7f76547718d611e09cf7001ec947ccaf = new MClass("7f765477-18d6-11e0-9cf7-001ec947ccaf","BpmnReceiveTask","7f765477-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20e18d611e09cf7001ec947ccaf.getMClass().add(id_7f76547718d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnReceiveTask",id_7f76547718d611e09cf7001ec947ccaf);// attribute Implementation
+        this.mClass.put("BpmnReceiveTask",id_7f76547718d611e09cf7001ec947ccaf);
+        // attribute Implementation
 
         MAttribute id_7f78b79918d611e09cf7001ec947ccaf = new MAttribute("7f78b799-18d6-11e0-9cf7-001ec947ccaf","Implementation","7f765477-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_7f76547718d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b79918d611e09cf7001ec947ccaf);
@@ -500,12 +479,12 @@ public class MMetamodel {
 
 
 
-
         //## class BpmnScriptTask ##
 
         MClass id_7f76547818d611e09cf7001ec947ccaf = new MClass("7f765478-18d6-11e0-9cf7-001ec947ccaf","BpmnScriptTask","7f765478-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20e18d611e09cf7001ec947ccaf.getMClass().add(id_7f76547818d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnScriptTask",id_7f76547818d611e09cf7001ec947ccaf);// attribute ScriptLanguage
+        this.mClass.put("BpmnScriptTask",id_7f76547818d611e09cf7001ec947ccaf);
+        // attribute ScriptLanguage
 
         MAttribute id_7f76551618d611e09cf7001ec947ccaf = new MAttribute("7f765516-18d6-11e0-9cf7-001ec947ccaf","ScriptLanguage","7f765478-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_7f76547818d611e09cf7001ec947ccaf.getMAttributes().add(id_7f76551618d611e09cf7001ec947ccaf);
@@ -518,16 +497,15 @@ public class MMetamodel {
 
 
 
-
         //## class BpmnSendTask ##
 
         MClass id_7f76547918d611e09cf7001ec947ccaf = new MClass("7f765479-18d6-11e0-9cf7-001ec947ccaf","BpmnSendTask","7f765479-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20e18d611e09cf7001ec947ccaf.getMClass().add(id_7f76547918d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnSendTask",id_7f76547918d611e09cf7001ec947ccaf);// attribute Implementation
+        this.mClass.put("BpmnSendTask",id_7f76547918d611e09cf7001ec947ccaf);
+        // attribute Implementation
 
         MAttribute id_7f78b78118d611e09cf7001ec947ccaf = new MAttribute("7f78b781-18d6-11e0-9cf7-001ec947ccaf","Implementation","7f765479-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_7f76547918d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b78118d611e09cf7001ec947ccaf);
-
 
 
 
@@ -535,11 +513,11 @@ public class MMetamodel {
 
         MClass id_7f76547a18d611e09cf7001ec947ccaf = new MClass("7f76547a-18d6-11e0-9cf7-001ec947ccaf","BpmnServiceTask","7f76547a-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20e18d611e09cf7001ec947ccaf.getMClass().add(id_7f76547a18d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnServiceTask",id_7f76547a18d611e09cf7001ec947ccaf);// attribute Implementation
+        this.mClass.put("BpmnServiceTask",id_7f76547a18d611e09cf7001ec947ccaf);
+        // attribute Implementation
 
         MAttribute id_7f78b7b918d611e09cf7001ec947ccaf = new MAttribute("7f78b7b9-18d6-11e0-9cf7-001ec947ccaf","Implementation","7f76547a-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_7f76547a18d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b7b918d611e09cf7001ec947ccaf);
-
 
 
 
@@ -547,7 +525,8 @@ public class MMetamodel {
 
         MClass id_7f73f21f18d611e09cf7001ec947ccaf = new MClass("7f73f21f-18d6-11e0-9cf7-001ec947ccaf","BpmnStandardLoopCharacteristics","7f73f21f-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20e18d611e09cf7001ec947ccaf.getMClass().add(id_7f73f21f18d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnStandardLoopCharacteristics",id_7f73f21f18d611e09cf7001ec947ccaf);// attribute TestBefore
+        this.mClass.put("BpmnStandardLoopCharacteristics",id_7f73f21f18d611e09cf7001ec947ccaf);
+        // attribute TestBefore
 
         MAttribute id_7f78b7bb18d611e09cf7001ec947ccaf = new MAttribute("7f78b7bb-18d6-11e0-9cf7-001ec947ccaf","TestBefore","7f73f21f-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_7f73f21f18d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b7bb18d611e09cf7001ec947ccaf);
@@ -566,16 +545,15 @@ public class MMetamodel {
 
 
 
-
         //## class BpmnSubProcess ##
 
         MClass id_7f73f22018d611e09cf7001ec947ccaf = new MClass("7f73f220-18d6-11e0-9cf7-001ec947ccaf","BpmnSubProcess","7f73f220-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20e18d611e09cf7001ec947ccaf.getMClass().add(id_7f73f22018d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnSubProcess",id_7f73f22018d611e09cf7001ec947ccaf);// attribute TriggeredByEvent
+        this.mClass.put("BpmnSubProcess",id_7f73f22018d611e09cf7001ec947ccaf);
+        // attribute TriggeredByEvent
 
         MAttribute id_7f78b7d918d611e09cf7001ec947ccaf = new MAttribute("7f78b7d9-18d6-11e0-9cf7-001ec947ccaf","TriggeredByEvent","7f73f220-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_7f73f22018d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b7d918d611e09cf7001ec947ccaf);
-
 
 
 
@@ -583,11 +561,11 @@ public class MMetamodel {
 
         MClass id_7f73f22118d611e09cf7001ec947ccaf = new MClass("7f73f221-18d6-11e0-9cf7-001ec947ccaf","BpmnTask","7f73f221-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20e18d611e09cf7001ec947ccaf.getMClass().add(id_7f73f22118d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnTask",id_7f73f22118d611e09cf7001ec947ccaf);// attribute IsGlobal
+        this.mClass.put("BpmnTask",id_7f73f22118d611e09cf7001ec947ccaf);
+        // attribute IsGlobal
 
         MAttribute id_7f78b7f818d611e09cf7001ec947ccaf = new MAttribute("7f78b7f8-18d6-11e0-9cf7-001ec947ccaf","IsGlobal","7f73f221-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_7f73f22118d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b7f818d611e09cf7001ec947ccaf);
-
 
 
 
@@ -595,7 +573,8 @@ public class MMetamodel {
 
         MClass id_7f73f22218d611e09cf7001ec947ccaf = new MClass("7f73f222-18d6-11e0-9cf7-001ec947ccaf","BpmnTransaction","7f73f222-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20e18d611e09cf7001ec947ccaf.getMClass().add(id_7f73f22218d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnTransaction",id_7f73f22218d611e09cf7001ec947ccaf);// attribute Protocol
+        this.mClass.put("BpmnTransaction",id_7f73f22218d611e09cf7001ec947ccaf);
+        // attribute Protocol
 
         MAttribute id_7f78b7b718d611e09cf7001ec947ccaf = new MAttribute("7f78b7b7-18d6-11e0-9cf7-001ec947ccaf","Protocol","7f73f222-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_7f73f22218d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b7b718d611e09cf7001ec947ccaf);
@@ -608,16 +587,15 @@ public class MMetamodel {
 
 
 
-
         //## class BpmnUserTask ##
 
         MClass id_7f73f22418d611e09cf7001ec947ccaf = new MClass("7f73f224-18d6-11e0-9cf7-001ec947ccaf","BpmnUserTask","7f73f224-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f20e18d611e09cf7001ec947ccaf.getMClass().add(id_7f73f22418d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnUserTask",id_7f73f22418d611e09cf7001ec947ccaf);// attribute Implementation
+        this.mClass.put("BpmnUserTask",id_7f73f22418d611e09cf7001ec947ccaf);
+        // attribute Implementation
 
         MAttribute id_7f78b7c618d611e09cf7001ec947ccaf = new MAttribute("7f78b7c6-18d6-11e0-9cf7-001ec947ccaf","Implementation","7f73f224-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_7f73f22418d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b7c618d611e09cf7001ec947ccaf);
-
 
 
 
@@ -630,11 +608,11 @@ public class MMetamodel {
 
         MClass id_7f76546b18d611e09cf7001ec947ccaf = new MClass("7f76546b-18d6-11e0-9cf7-001ec947ccaf","BpmnBoundaryEvent","7f76546b-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f1c318d611e09cf7001ec947ccaf.getMClass().add(id_7f76546b18d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnBoundaryEvent",id_7f76546b18d611e09cf7001ec947ccaf);// attribute CancelActivity
+        this.mClass.put("BpmnBoundaryEvent",id_7f76546b18d611e09cf7001ec947ccaf);
+        // attribute CancelActivity
 
         MAttribute id_7f78b7e018d611e09cf7001ec947ccaf = new MAttribute("7f78b7e0-18d6-11e0-9cf7-001ec947ccaf","CancelActivity","7f76546b-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_7f76546b18d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b7e018d611e09cf7001ec947ccaf);
-
 
 
 
@@ -648,11 +626,11 @@ public class MMetamodel {
 
         MClass id_7f76546d18d611e09cf7001ec947ccaf = new MClass("7f76546d-18d6-11e0-9cf7-001ec947ccaf","BpmnCatchEvent","7f76546d-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f1c318d611e09cf7001ec947ccaf.getMClass().add(id_7f76546d18d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnCatchEvent",id_7f76546d18d611e09cf7001ec947ccaf);// attribute ParallelMultiple
+        this.mClass.put("BpmnCatchEvent",id_7f76546d18d611e09cf7001ec947ccaf);
+        // attribute ParallelMultiple
 
         MAttribute id_7f78b7ce18d611e09cf7001ec947ccaf = new MAttribute("7f78b7ce-18d6-11e0-9cf7-001ec947ccaf","ParallelMultiple","7f76546d-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_7f76546d18d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b7ce18d611e09cf7001ec947ccaf);
-
 
 
 
@@ -666,11 +644,11 @@ public class MMetamodel {
 
         MClass id_7f7654a018d611e09cf7001ec947ccaf = new MClass("7f7654a0-18d6-11e0-9cf7-001ec947ccaf","BpmnConditionalEventDefinition","7f7654a0-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f1c318d611e09cf7001ec947ccaf.getMClass().add(id_7f7654a018d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnConditionalEventDefinition",id_7f7654a018d611e09cf7001ec947ccaf);// attribute Condition
+        this.mClass.put("BpmnConditionalEventDefinition",id_7f7654a018d611e09cf7001ec947ccaf);
+        // attribute Condition
 
         MAttribute id_7f78b7a218d611e09cf7001ec947ccaf = new MAttribute("7f78b7a2-18d6-11e0-9cf7-001ec947ccaf","Condition","7f7654a0-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_7f7654a018d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b7a218d611e09cf7001ec947ccaf);
-
 
 
 
@@ -684,11 +662,11 @@ public class MMetamodel {
 
         MClass id_7f7654a218d611e09cf7001ec947ccaf = new MClass("7f7654a2-18d6-11e0-9cf7-001ec947ccaf","BpmnErrorEventDefinition","7f7654a2-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f1c318d611e09cf7001ec947ccaf.getMClass().add(id_7f7654a218d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnErrorEventDefinition",id_7f7654a218d611e09cf7001ec947ccaf);// attribute ErrorCode
+        this.mClass.put("BpmnErrorEventDefinition",id_7f7654a218d611e09cf7001ec947ccaf);
+        // attribute ErrorCode
 
         MAttribute id_7f78b7e618d611e09cf7001ec947ccaf = new MAttribute("7f78b7e6-18d6-11e0-9cf7-001ec947ccaf","ErrorCode","7f7654a2-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_7f7654a218d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b7e618d611e09cf7001ec947ccaf);
-
 
 
 
@@ -696,11 +674,11 @@ public class MMetamodel {
 
         MClass id_7f7654a318d611e09cf7001ec947ccaf = new MClass("7f7654a3-18d6-11e0-9cf7-001ec947ccaf","BpmnEscalationEventDefinition","7f7654a3-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f1c318d611e09cf7001ec947ccaf.getMClass().add(id_7f7654a318d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnEscalationEventDefinition",id_7f7654a318d611e09cf7001ec947ccaf);// attribute EscalationCode
+        this.mClass.put("BpmnEscalationEventDefinition",id_7f7654a318d611e09cf7001ec947ccaf);
+        // attribute EscalationCode
 
         MAttribute id_7f78b79f18d611e09cf7001ec947ccaf = new MAttribute("7f78b79f-18d6-11e0-9cf7-001ec947ccaf","EscalationCode","7f7654a3-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_7f7654a318d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b79f18d611e09cf7001ec947ccaf);
-
 
 
 
@@ -756,11 +734,11 @@ public class MMetamodel {
 
         MClass id_7f7654ac18d611e09cf7001ec947ccaf = new MClass("7f7654ac-18d6-11e0-9cf7-001ec947ccaf","BpmnStartEvent","7f7654ac-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f1c318d611e09cf7001ec947ccaf.getMClass().add(id_7f7654ac18d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnStartEvent",id_7f7654ac18d611e09cf7001ec947ccaf);// attribute IsInterrupting
+        this.mClass.put("BpmnStartEvent",id_7f7654ac18d611e09cf7001ec947ccaf);
+        // attribute IsInterrupting
 
         MAttribute id_7f78b80e18d611e09cf7001ec947ccaf = new MAttribute("7f78b80e-18d6-11e0-9cf7-001ec947ccaf","IsInterrupting","7f7654ac-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_7f7654ac18d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b80e18d611e09cf7001ec947ccaf);
-
 
 
 
@@ -780,7 +758,8 @@ public class MMetamodel {
 
         MClass id_7f7654af18d611e09cf7001ec947ccaf = new MClass("7f7654af-18d6-11e0-9cf7-001ec947ccaf","BpmnTimerEventDefinition","7f7654af-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f1c318d611e09cf7001ec947ccaf.getMClass().add(id_7f7654af18d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnTimerEventDefinition",id_7f7654af18d611e09cf7001ec947ccaf);// attribute TimeCycle
+        this.mClass.put("BpmnTimerEventDefinition",id_7f7654af18d611e09cf7001ec947ccaf);
+        // attribute TimeCycle
 
         MAttribute id_7f78b81f18d611e09cf7001ec947ccaf = new MAttribute("7f78b81f-18d6-11e0-9cf7-001ec947ccaf","TimeCycle","7f7654af-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_7f7654af18d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b81f18d611e09cf7001ec947ccaf);
@@ -795,7 +774,6 @@ public class MMetamodel {
 
 
 
-
         //##### Package gateways#####
         MPackage id_7f73f1c418d611e09cf7001ec947ccaf = new MPackage("7f73f1c4-18d6-11e0-9cf7-001ec947ccaf","gateways","7f73f1c4-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_9730153a082911e09123001ec947ccaf.getMPackages().add(id_7f73f1c418d611e09cf7001ec947ccaf);
@@ -803,11 +781,11 @@ public class MMetamodel {
 
         MClass id_7f7654e318d611e09cf7001ec947ccaf = new MClass("7f7654e3-18d6-11e0-9cf7-001ec947ccaf","BpmnComplexGateway","7f7654e3-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f1c418d611e09cf7001ec947ccaf.getMClass().add(id_7f7654e318d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnComplexGateway",id_7f7654e318d611e09cf7001ec947ccaf);// attribute ActivationExpression
+        this.mClass.put("BpmnComplexGateway",id_7f7654e318d611e09cf7001ec947ccaf);
+        // attribute ActivationExpression
 
         MAttribute id_7f78b81718d611e09cf7001ec947ccaf = new MAttribute("7f78b817-18d6-11e0-9cf7-001ec947ccaf","ActivationExpression","7f7654e3-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_7f7654e318d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b81718d611e09cf7001ec947ccaf);
-
 
 
 
@@ -815,7 +793,8 @@ public class MMetamodel {
 
         MClass id_7f7654e418d611e09cf7001ec947ccaf = new MClass("7f7654e4-18d6-11e0-9cf7-001ec947ccaf","BpmnEventBasedGateway","7f7654e4-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f1c418d611e09cf7001ec947ccaf.getMClass().add(id_7f7654e418d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnEventBasedGateway",id_7f7654e418d611e09cf7001ec947ccaf);// attribute Instanciate
+        this.mClass.put("BpmnEventBasedGateway",id_7f7654e418d611e09cf7001ec947ccaf);
+        // attribute Instanciate
 
         MAttribute id_7f78b82018d611e09cf7001ec947ccaf = new MAttribute("7f78b820-18d6-11e0-9cf7-001ec947ccaf","Instanciate","7f7654e4-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_7f7654e418d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b82018d611e09cf7001ec947ccaf);
@@ -825,7 +804,6 @@ public class MMetamodel {
 
         MAttribute id_7f78b82118d611e09cf7001ec947ccaf = new MAttribute("7f78b821-18d6-11e0-9cf7-001ec947ccaf","EventGatewayType","7f7654e4-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("BpmnEventBasedGatewayType"),false,true,false);
         id_7f7654e418d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b82118d611e09cf7001ec947ccaf);
-
 
 
 
@@ -839,11 +817,11 @@ public class MMetamodel {
 
         MClass id_7f7654ce18d611e09cf7001ec947ccaf = new MClass("7f7654ce-18d6-11e0-9cf7-001ec947ccaf","BpmnGateway","7f7654ce-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f1c418d611e09cf7001ec947ccaf.getMClass().add(id_7f7654ce18d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnGateway",id_7f7654ce18d611e09cf7001ec947ccaf);// attribute GatewayDirection
+        this.mClass.put("BpmnGateway",id_7f7654ce18d611e09cf7001ec947ccaf);
+        // attribute GatewayDirection
 
         MAttribute id_7f78b82a18d611e09cf7001ec947ccaf = new MAttribute("7f78b82a-18d6-11e0-9cf7-001ec947ccaf","GatewayDirection","7f7654ce-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("BpmnGatewayDirection"),false,true,false);
         id_7f7654ce18d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b82a18d611e09cf7001ec947ccaf);
-
 
 
 
@@ -874,7 +852,8 @@ public class MMetamodel {
 
         MClass id_7f7654e018d611e09cf7001ec947ccaf = new MClass("7f7654e0-18d6-11e0-9cf7-001ec947ccaf","BpmnDataStore","7f7654e0-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f1c518d611e09cf7001ec947ccaf.getMClass().add(id_7f7654e018d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnDataStore",id_7f7654e018d611e09cf7001ec947ccaf);// attribute Capacity
+        this.mClass.put("BpmnDataStore",id_7f7654e018d611e09cf7001ec947ccaf);
+        // attribute Capacity
 
         MAttribute id_7f78b86118d611e09cf7001ec947ccaf = new MAttribute("7f78b861-18d6-11e0-9cf7-001ec947ccaf","Capacity","7f7654e0-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("integer"),false,true,false);
         id_7f7654e018d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b86118d611e09cf7001ec947ccaf);
@@ -887,12 +866,12 @@ public class MMetamodel {
 
 
 
-
         //## class BpmnDataAssociation ##
 
         MClass id_7f7654e118d611e09cf7001ec947ccaf = new MClass("7f7654e1-18d6-11e0-9cf7-001ec947ccaf","BpmnDataAssociation","7f7654e1-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f1c518d611e09cf7001ec947ccaf.getMClass().add(id_7f7654e118d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnDataAssociation",id_7f7654e118d611e09cf7001ec947ccaf);// attribute Assignment
+        this.mClass.put("BpmnDataAssociation",id_7f7654e118d611e09cf7001ec947ccaf);
+        // attribute Assignment
 
         MAttribute id_7f78b84918d611e09cf7001ec947ccaf = new MAttribute("7f78b849-18d6-11e0-9cf7-001ec947ccaf","Assignment","7f7654e1-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_7f7654e118d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b84918d611e09cf7001ec947ccaf);
@@ -908,7 +887,6 @@ public class MMetamodel {
 
         MAttribute id_7f78b83918d611e09cf7001ec947ccaf = new MAttribute("7f78b839-18d6-11e0-9cf7-001ec947ccaf","Language","7f7654e1-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_7f7654e118d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b83918d611e09cf7001ec947ccaf);
-
 
 
 
@@ -940,7 +918,8 @@ public class MMetamodel {
 
         MClass id_7f7654c518d611e09cf7001ec947ccaf = new MClass("7f7654c5-18d6-11e0-9cf7-001ec947ccaf","BpmnItemDefinition","7f7654c5-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f1c518d611e09cf7001ec947ccaf.getMClass().add(id_7f7654c518d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnItemDefinition",id_7f7654c518d611e09cf7001ec947ccaf);// attribute ItemKind
+        this.mClass.put("BpmnItemDefinition",id_7f7654c518d611e09cf7001ec947ccaf);
+        // attribute ItemKind
 
         MAttribute id_7f7b19bc18d611e09cf7001ec947ccaf = new MAttribute("7f7b19bc-18d6-11e0-9cf7-001ec947ccaf","ItemKind","7f7654c5-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("BpmnItemKind"),false,true,false);
         id_7f7654c518d611e09cf7001ec947ccaf.getMAttributes().add(id_7f7b19bc18d611e09cf7001ec947ccaf);
@@ -950,7 +929,6 @@ public class MMetamodel {
 
         MAttribute id_7f78b88018d611e09cf7001ec947ccaf = new MAttribute("7f78b880-18d6-11e0-9cf7-001ec947ccaf","IsCollection","7f7654c5-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_7f7654c518d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b88018d611e09cf7001ec947ccaf);
-
 
 
 
@@ -975,11 +953,11 @@ public class MMetamodel {
 
         MClass id_7f7654ea18d611e09cf7001ec947ccaf = new MClass("7f7654ea-18d6-11e0-9cf7-001ec947ccaf","BpmnResourceParameter","7f7654ea-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f1c618d611e09cf7001ec947ccaf.getMClass().add(id_7f7654ea18d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnResourceParameter",id_7f7654ea18d611e09cf7001ec947ccaf);// attribute IsRequired
+        this.mClass.put("BpmnResourceParameter",id_7f7654ea18d611e09cf7001ec947ccaf);
+        // attribute IsRequired
 
         MAttribute id_7f7b19c418d611e09cf7001ec947ccaf = new MAttribute("7f7b19c4-18d6-11e0-9cf7-001ec947ccaf","IsRequired","7f7654ea-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_7f7654ea18d611e09cf7001ec947ccaf.getMAttributes().add(id_7f7b19c418d611e09cf7001ec947ccaf);
-
 
 
 
@@ -993,11 +971,11 @@ public class MMetamodel {
 
         MClass id_7f7654c918d611e09cf7001ec947ccaf = new MClass("7f7654c9-18d6-11e0-9cf7-001ec947ccaf","BpmnResourceParameterBinding","7f7654c9-18d6-11e0-9cf7-001ec947ccaf.exml");
         id_7f73f1c618d611e09cf7001ec947ccaf.getMClass().add(id_7f7654c918d611e09cf7001ec947ccaf);
-        this.mClass.put("BpmnResourceParameterBinding",id_7f7654c918d611e09cf7001ec947ccaf);// attribute Expression
+        this.mClass.put("BpmnResourceParameterBinding",id_7f7654c918d611e09cf7001ec947ccaf);
+        // attribute Expression
 
         MAttribute id_7f78b88c18d611e09cf7001ec947ccaf = new MAttribute("7f78b88c-18d6-11e0-9cf7-001ec947ccaf","Expression","7f7654c9-18d6-11e0-9cf7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_7f7654c918d611e09cf7001ec947ccaf.getMAttributes().add(id_7f78b88c18d611e09cf7001ec947ccaf);
-
 
 
 
@@ -1052,7 +1030,8 @@ public class MMetamodel {
 
         MClass id_000c0248000059170000000000000000 = new MClass("000c0248-0000-5917-0000-000000000000","AbstractDiagram","000c0248-0000-5917-0000-000000000000.exml");
         id_000c0248000059140000000000000000.getMClass().add(id_000c0248000059170000000000000000);
-        this.mClass.put("AbstractDiagram",id_000c0248000059170000000000000000);// attribute UiDataVersion
+        this.mClass.put("AbstractDiagram",id_000c0248000059170000000000000000);
+        // attribute UiDataVersion
 
         MAttribute id_000c0248000059920000000000000000 = new MAttribute("000c0248-0000-5992-0000-000000000000","UiDataVersion","000c0248-0000-5917-0000-000000000000.exml",this.mBaseTypes.get("integer"),false,true,false);
         id_000c0248000059170000000000000000.getMAttributes().add(id_000c0248000059920000000000000000);
@@ -1071,16 +1050,15 @@ public class MMetamodel {
 
 
 
-
         //## class ActivityDiagram ##
 
         MClass id_00d012a8000000720000000000000000 = new MClass("00d012a8-0000-0072-0000-000000000000","ActivityDiagram","00d012a8-0000-0072-0000-000000000000.exml");
         id_000c0248000059140000000000000000.getMClass().add(id_00d012a8000000720000000000000000);
-        this.mClass.put("ActivityDiagram",id_00d012a8000000720000000000000000);// attribute IsVertical
+        this.mClass.put("ActivityDiagram",id_00d012a8000000720000000000000000);
+        // attribute IsVertical
 
         MAttribute id_01e4048c0000002b0000000000000000 = new MAttribute("01e4048c-0000-002b-0000-000000000000","IsVertical","00d012a8-0000-0072-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_00d012a8000000720000000000000000.getMAttributes().add(id_01e4048c0000002b0000000000000000);
-
 
 
 
@@ -1159,7 +1137,8 @@ public class MMetamodel {
 
         MClass id_0148033c00000d3e0000000000000000 = new MClass("0148033c-0000-0d3e-0000-000000000000","ModuleParameter","0148033c-0000-0d3e-0000-000000000000.exml");
         id_0148033c000000aa0000000000000000.getMClass().add(id_0148033c00000d3e0000000000000000);
-        this.mClass.put("ModuleParameter",id_0148033c00000d3e0000000000000000);// attribute GroupName
+        this.mClass.put("ModuleParameter",id_0148033c00000d3e0000000000000000);
+        // attribute GroupName
 
         MAttribute id_0148033c0001d4030000000000000000 = new MAttribute("0148033c-0001-d403-0000-000000000000","GroupName","0148033c-0000-0d3e-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000d3e0000000000000000.getMAttributes().add(id_0148033c0001d4030000000000000000);
@@ -1202,12 +1181,12 @@ public class MMetamodel {
 
 
 
-
         //## class ModuleComponent ##
 
         MClass id_0148033c00000d350000000000000000 = new MClass("0148033c-0000-0d35-0000-000000000000","ModuleComponent","0148033c-0000-0d35-0000-000000000000.exml");
         id_0148033c000000aa0000000000000000.getMClass().add(id_0148033c00000d350000000000000000);
-        this.mClass.put("ModuleComponent",id_0148033c00000d350000000000000000);// attribute LicenseKey
+        this.mClass.put("ModuleComponent",id_0148033c00000d350000000000000000);
+        // attribute LicenseKey
 
         MAttribute id_0148033c0001e37c0000000000000000 = new MAttribute("0148033c-0001-e37c-0000-000000000000","LicenseKey","0148033c-0000-0d35-0000-000000000000.exml",this.mBaseTypes.get("integer"),false,true,false);
         id_0148033c00000d350000000000000000.getMAttributes().add(id_0148033c0001e37c0000000000000000);
@@ -1250,12 +1229,12 @@ public class MMetamodel {
 
 
 
-
         //## class Project ##
 
         MClass id_0148033c00000ce00000000000000000 = new MClass("0148033c-0000-0ce0-0000-000000000000","Project","0148033c-0000-0ce0-0000-000000000000.exml");
         id_0148033c000000aa0000000000000000.getMClass().add(id_0148033c00000ce00000000000000000);
-        this.mClass.put("Project",id_0148033c00000ce00000000000000000);// attribute ProjectContext
+        this.mClass.put("Project",id_0148033c00000ce00000000000000000);
+        // attribute ProjectContext
 
         MAttribute id_0148033c0001c7ec0000000000000000 = new MAttribute("0148033c-0001-c7ec-0000-000000000000","ProjectContext","0148033c-0000-0ce0-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000ce00000000000000000.getMAttributes().add(id_0148033c0001c7ec0000000000000000);
@@ -1265,7 +1244,6 @@ public class MMetamodel {
 
         MAttribute id_0148033c0001c7ea0000000000000000 = new MAttribute("0148033c-0001-c7ea-0000-000000000000","ProjectDescr","0148033c-0000-0ce0-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000ce00000000000000000.getMAttributes().add(id_0148033c0001c7ea0000000000000000);
-
 
 
 
@@ -1296,7 +1274,8 @@ public class MMetamodel {
 
         MClass id_00080b08000018890000000000000000 = new MClass("00080b08-0000-1889-0000-000000000000","PropertyDefinition","00080b08-0000-1889-0000-000000000000.exml");
         id_61fcf793275311e2b500001ec947ccaf.getMClass().add(id_00080b08000018890000000000000000);
-        this.mClass.put("PropertyDefinition",id_00080b08000018890000000000000000);// attribute IsEditable
+        this.mClass.put("PropertyDefinition",id_00080b08000018890000000000000000);
+        // attribute IsEditable
 
         MAttribute id_00080b08000018be0000000000000000 = new MAttribute("00080b08-0000-18be-0000-000000000000","IsEditable","00080b08-0000-1889-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_00080b08000018890000000000000000.getMAttributes().add(id_00080b08000018be0000000000000000);
@@ -1306,7 +1285,6 @@ public class MMetamodel {
 
         MAttribute id_00080b08000019250000000000000000 = new MAttribute("00080b08-0000-1925-0000-000000000000","DefaultValue","00080b08-0000-1889-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_00080b08000018890000000000000000.getMAttributes().add(id_00080b08000019250000000000000000);
-
 
 
 
@@ -1320,7 +1298,8 @@ public class MMetamodel {
 
         MClass id_65895868275511e2b500001ec947ccaf = new MClass("65895868-2755-11e2-b500-001ec947ccaf","PropertyTable","65895868-2755-11e2-b500-001ec947ccaf.exml");
         id_61fcf793275311e2b500001ec947ccaf.getMClass().add(id_65895868275511e2b500001ec947ccaf);
-        this.mClass.put("PropertyTable",id_65895868275511e2b500001ec947ccaf);// attribute name
+        this.mClass.put("PropertyTable",id_65895868275511e2b500001ec947ccaf);
+        // attribute name
 
         MAttribute id_b3df7365275811e2b500001ec947ccaf = new MAttribute("b3df7365-2758-11e2-b500-001ec947ccaf","name","65895868-2755-11e2-b500-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_65895868275511e2b500001ec947ccaf.getMAttributes().add(id_b3df7365275811e2b500001ec947ccaf);
@@ -1330,7 +1309,6 @@ public class MMetamodel {
 
         MAttribute id_e63220fb282511e2bf07001ec947ccaf = new MAttribute("e63220fb-2825-11e2-bf07-001ec947ccaf","content","65895868-2755-11e2-b500-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_65895868275511e2b500001ec947ccaf.getMAttributes().add(id_e63220fb282511e2bf07001ec947ccaf);
-
 
 
 
@@ -1344,11 +1322,11 @@ public class MMetamodel {
 
         MClass id_00080b0800001aae0000000000000000 = new MClass("00080b08-0000-1aae-0000-000000000000","PropertyType","00080b08-0000-1aae-0000-000000000000.exml");
         id_61fcf793275311e2b500001ec947ccaf.getMClass().add(id_00080b0800001aae0000000000000000);
-        this.mClass.put("PropertyType",id_00080b0800001aae0000000000000000);// attribute BaseType
+        this.mClass.put("PropertyType",id_00080b0800001aae0000000000000000);
+        // attribute BaseType
 
         MAttribute id_f9fa7e8727f011e2b500001ec947ccaf = new MAttribute("f9fa7e87-27f0-11e2-b500-001ec947ccaf","BaseType","00080b08-0000-1aae-0000-000000000000.exml",this.mBaseTypes.get("PropertyBaseType"),false,true,false);
         id_00080b0800001aae0000000000000000.getMAttributes().add(id_f9fa7e8727f011e2b500001ec947ccaf);
-
 
 
 
@@ -1373,11 +1351,11 @@ public class MMetamodel {
 
         MClass id_b4912da933154ac6bd4a4605abd30f4e = new MClass("b4912da9-3315-4ac6-bd4a-4605abd30f4e","QueryDefinition","b4912da9-3315-4ac6-bd4a-4605abd30f4e.exml");
         id_4b9cc988a81d480a94a89f9b0c482d01.getMClass().add(id_b4912da933154ac6bd4a4605abd30f4e);
-        this.mClass.put("QueryDefinition",id_b4912da933154ac6bd4a4605abd30f4e);// attribute UsingAdditions
+        this.mClass.put("QueryDefinition",id_b4912da933154ac6bd4a4605abd30f4e);
+        // attribute UsingAdditions
 
         MAttribute id_d2a3fb572bc442cf83e2b562a7f35b2c = new MAttribute("d2a3fb57-2bc4-42cf-83e2-b562a7f35b2c","UsingAdditions","b4912da9-3315-4ac6-bd4a-4605abd30f4e.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_b4912da933154ac6bd4a4605abd30f4e.getMAttributes().add(id_d2a3fb572bc442cf83e2b562a7f35b2c);
-
 
 
 
@@ -1393,11 +1371,11 @@ public class MMetamodel {
 
         MClass id_0008152c00001ba90000000000000000 = new MClass("0008152c-0000-1ba9-0000-000000000000","Abstraction","0008152c-0000-1ba9-0000-000000000000.exml");
         id_00d00f24000000010000000000000000.getMClass().add(id_0008152c00001ba90000000000000000);
-        this.mClass.put("Abstraction",id_0008152c00001ba90000000000000000);// attribute Mapping
+        this.mClass.put("Abstraction",id_0008152c00001ba90000000000000000);
+        // attribute Mapping
 
         MAttribute id_0008152c00001bab0000000000000000 = new MAttribute("0008152c-0000-1bab-0000-000000000000","Mapping","0008152c-0000-1ba9-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0008152c00001ba90000000000000000.getMAttributes().add(id_0008152c00001bab0000000000000000);
-
 
 
 
@@ -1405,7 +1383,8 @@ public class MMetamodel {
 
         MClass id_0148033c00000cdd0000000000000000 = new MClass("0148033c-0000-0cdd-0000-000000000000","Constraint","0148033c-0000-0cdd-0000-000000000000.exml");
         id_00d00f24000000010000000000000000.getMClass().add(id_0148033c00000cdd0000000000000000);
-        this.mClass.put("Constraint",id_0148033c00000cdd0000000000000000);// attribute BaseClass
+        this.mClass.put("Constraint",id_0148033c00000cdd0000000000000000);
+        // attribute BaseClass
 
         MAttribute id_0148033c0001990d0000000000000000 = new MAttribute("0148033c-0001-990d-0000-000000000000","BaseClass","0148033c-0000-0cdd-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000cdd0000000000000000.getMAttributes().add(id_0148033c0001990d0000000000000000);
@@ -1424,12 +1403,12 @@ public class MMetamodel {
 
 
 
-
         //## class Dependency ##
 
         MClass id_0148033c00000cf30000000000000000 = new MClass("0148033c-0000-0cf3-0000-000000000000","Dependency","0148033c-0000-0cf3-0000-000000000000.exml");
         id_00d00f24000000010000000000000000.getMClass().add(id_0148033c00000cf30000000000000000);
-        this.mClass.put("Dependency",id_0148033c00000cf30000000000000000);// attribute DependsOnId
+        this.mClass.put("Dependency",id_0148033c00000cf30000000000000000);
+        // attribute DependsOnId
 
         MAttribute id_0148033c00019b580000000000000000 = new MAttribute("0148033c-0001-9b58-0000-000000000000","DependsOnId","0148033c-0000-0cf3-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000cf30000000000000000.getMAttributes().add(id_0148033c00019b580000000000000000);
@@ -1442,16 +1421,15 @@ public class MMetamodel {
 
 
 
-
         //## class Element ##
 
         MClass id_0148033c00000ca70000000000000000 = new MClass("0148033c-0000-0ca7-0000-000000000000","Element","0148033c-0000-0ca7-0000-000000000000.exml");
         id_00d00f24000000010000000000000000.getMClass().add(id_0148033c00000ca70000000000000000);
-        this.mClass.put("Element",id_0148033c00000ca70000000000000000);// attribute ModifDate
+        this.mClass.put("Element",id_0148033c00000ca70000000000000000);
+        // attribute ModifDate
 
         MAttribute id_0148033c00019c050000000000000000 = new MAttribute("0148033c-0001-9c05-0000-000000000000","ModifDate","0148033c-0000-0ca7-0000-000000000000.exml",this.mBaseTypes.get("long"),false,true,false);
         id_0148033c00000ca70000000000000000.getMAttributes().add(id_0148033c00019c050000000000000000);
-
 
 
 
@@ -1459,11 +1437,11 @@ public class MMetamodel {
 
         MClass id_0148033c00000ca80000000000000000 = new MClass("0148033c-0000-0ca8-0000-000000000000","ModelElement","0148033c-0000-0ca8-0000-000000000000.exml");
         id_00d00f24000000010000000000000000.getMClass().add(id_0148033c00000ca80000000000000000);
-        this.mClass.put("ModelElement",id_0148033c00000ca80000000000000000);// attribute Name
+        this.mClass.put("ModelElement",id_0148033c00000ca80000000000000000);
+        // attribute Name
 
         MAttribute id_0148033c0001a7230000000000000000 = new MAttribute("0148033c-0001-a723-0000-000000000000","Name","0148033c-0000-0ca8-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000ca80000000000000000.getMAttributes().add(id_0148033c0001a7230000000000000000);
-
 
 
 
@@ -1477,7 +1455,8 @@ public class MMetamodel {
 
         MClass id_0148033c00000cda0000000000000000 = new MClass("0148033c-0000-0cda-0000-000000000000","Note","0148033c-0000-0cda-0000-000000000000.exml");
         id_00d00f24000000010000000000000000.getMClass().add(id_0148033c00000cda0000000000000000);
-        this.mClass.put("Note",id_0148033c00000cda0000000000000000);// attribute Content
+        this.mClass.put("Note",id_0148033c00000cda0000000000000000);
+        // attribute Content
 
         MAttribute id_0148033c0001ad340000000000000000 = new MAttribute("0148033c-0001-ad34-0000-000000000000","Content","0148033c-0000-0cda-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000cda0000000000000000.getMAttributes().add(id_0148033c0001ad340000000000000000);
@@ -1490,12 +1469,12 @@ public class MMetamodel {
 
 
 
-
         //## class NoteType ##
 
         MClass id_0148033c00000cdb0000000000000000 = new MClass("0148033c-0000-0cdb-0000-000000000000","NoteType","0148033c-0000-0cdb-0000-000000000000.exml");
         id_00d00f24000000010000000000000000.getMClass().add(id_0148033c00000cdb0000000000000000);
-        this.mClass.put("NoteType",id_0148033c00000cdb0000000000000000);// attribute IsHidden
+        this.mClass.put("NoteType",id_0148033c00000cdb0000000000000000);
+        // attribute IsHidden
 
         MAttribute id_0148033c0001add30000000000000000 = new MAttribute("0148033c-0001-add3-0000-000000000000","IsHidden","0148033c-0000-0cdb-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_0148033c00000cdb0000000000000000.getMAttributes().add(id_0148033c0001add30000000000000000);
@@ -1514,16 +1493,15 @@ public class MMetamodel {
 
 
 
-
         //## class Profile ##
 
         MClass id_0148033c00000cbc0000000000000000 = new MClass("0148033c-0000-0cbc-0000-000000000000","Profile","0148033c-0000-0cbc-0000-000000000000.exml");
         id_00d00f24000000010000000000000000.getMClass().add(id_0148033c00000cbc0000000000000000);
-        this.mClass.put("Profile",id_0148033c00000cbc0000000000000000);// attribute JCode
+        this.mClass.put("Profile",id_0148033c00000cbc0000000000000000);
+        // attribute JCode
 
         MAttribute id_f6b0da6c398e11de8c9d001ec947ccaf = new MAttribute("f6b0da6c-398e-11de-8c9d-001ec947ccaf","JCode","0148033c-0000-0cbc-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000cbc0000000000000000.getMAttributes().add(id_f6b0da6c398e11de8c9d001ec947ccaf);
-
 
 
 
@@ -1531,7 +1509,8 @@ public class MMetamodel {
 
         MClass id_0148033c00000cdc0000000000000000 = new MClass("0148033c-0000-0cdc-0000-000000000000","Stereotype","0148033c-0000-0cdc-0000-000000000000.exml");
         id_00d00f24000000010000000000000000.getMClass().add(id_0148033c00000cdc0000000000000000);
-        this.mClass.put("Stereotype",id_0148033c00000cdc0000000000000000);// attribute Image
+        this.mClass.put("Stereotype",id_0148033c00000cdc0000000000000000);
+        // attribute Image
 
         MAttribute id_0148033c0001bccf0000000000000000 = new MAttribute("0148033c-0001-bccf-0000-000000000000","Image","0148033c-0000-0cdc-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000cdc0000000000000000.getMAttributes().add(id_0148033c0001bccf0000000000000000);
@@ -1562,7 +1541,6 @@ public class MMetamodel {
 
 
 
-
         //## class Substitution ##
 
         MClass id_0008152c00001bb30000000000000000 = new MClass("0008152c-0000-1bb3-0000-000000000000","Substitution","0008152c-0000-1bb3-0000-000000000000.exml");
@@ -1573,11 +1551,11 @@ public class MMetamodel {
 
         MClass id_0148033c00000cd70000000000000000 = new MClass("0148033c-0000-0cd7-0000-000000000000","TagParameter","0148033c-0000-0cd7-0000-000000000000.exml");
         id_00d00f24000000010000000000000000.getMClass().add(id_0148033c00000cd70000000000000000);
-        this.mClass.put("TagParameter",id_0148033c00000cd70000000000000000);// attribute Value
+        this.mClass.put("TagParameter",id_0148033c00000cd70000000000000000);
+        // attribute Value
 
         MAttribute id_0148033c0001bd710000000000000000 = new MAttribute("0148033c-0001-bd71-0000-000000000000","Value","0148033c-0000-0cd7-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000cd70000000000000000.getMAttributes().add(id_0148033c0001bd710000000000000000);
-
 
 
 
@@ -1585,7 +1563,8 @@ public class MMetamodel {
 
         MClass id_0148033c00000cd80000000000000000 = new MClass("0148033c-0000-0cd8-0000-000000000000","TagType","0148033c-0000-0cd8-0000-000000000000.exml");
         id_00d00f24000000010000000000000000.getMClass().add(id_0148033c00000cd80000000000000000);
-        this.mClass.put("TagType",id_0148033c00000cd80000000000000000);// attribute ParamNumber
+        this.mClass.put("TagType",id_0148033c00000cd80000000000000000);
+        // attribute ParamNumber
 
         MAttribute id_41e02b68415811dea777001ec947ccaf = new MAttribute("41e02b68-4158-11de-a777-001ec947ccaf","ParamNumber","0148033c-0000-0cd8-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000cd80000000000000000.getMAttributes().add(id_41e02b68415811dea777001ec947ccaf);
@@ -1616,7 +1595,6 @@ public class MMetamodel {
 
 
 
-
         //## class TaggedValue ##
 
         MClass id_0148033c00000cd50000000000000000 = new MClass("0148033c-0000-0cd5-0000-000000000000","TaggedValue","0148033c-0000-0cd5-0000-000000000000.exml");
@@ -1633,11 +1611,11 @@ public class MMetamodel {
 
         MClass id_0319598d413e11dea777001ec947ccaf = new MClass("0319598d-413e-11de-a777-001ec947ccaf","MetaclassReference","0319598d-413e-11de-a777-001ec947ccaf.exml");
         id_00d00f24000000010000000000000000.getMClass().add(id_0319598d413e11dea777001ec947ccaf);
-        this.mClass.put("MetaclassReference",id_0319598d413e11dea777001ec947ccaf);// attribute ReferencedClassName
+        this.mClass.put("MetaclassReference",id_0319598d413e11dea777001ec947ccaf);
+        // attribute ReferencedClassName
 
         MAttribute id_217d216a4c6211de884f001ec947ccaf = new MAttribute("217d216a-4c62-11de-884f-001ec947ccaf","ReferencedClassName","0319598d-413e-11de-a777-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0319598d413e11dea777001ec947ccaf.getMAttributes().add(id_217d216a4c6211de884f001ec947ccaf);
-
 
 
 
@@ -1645,7 +1623,8 @@ public class MMetamodel {
 
         MClass id_62e2c6f7faef11e08de7001ec947ccaf = new MClass("62e2c6f7-faef-11e0-8de7-001ec947ccaf","ExternDocument","62e2c6f7-faef-11e0-8de7-001ec947ccaf.exml");
         id_00d00f24000000010000000000000000.getMClass().add(id_62e2c6f7faef11e08de7001ec947ccaf);
-        this.mClass.put("ExternDocument",id_62e2c6f7faef11e08de7001ec947ccaf);// attribute MimeType
+        this.mClass.put("ExternDocument",id_62e2c6f7faef11e08de7001ec947ccaf);
+        // attribute MimeType
 
         MAttribute id_835b184dfaf411e08de7001ec947ccaf = new MAttribute("835b184d-faf4-11e0-8de7-001ec947ccaf","MimeType","62e2c6f7-faef-11e0-8de7-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_62e2c6f7faef11e08de7001ec947ccaf.getMAttributes().add(id_835b184dfaf411e08de7001ec947ccaf);
@@ -1664,12 +1643,12 @@ public class MMetamodel {
 
 
 
-
         //## class ExternDocumentType ##
 
         MClass id_623fb2f8056f11e18525001ec947ccaf = new MClass("623fb2f8-056f-11e1-8525-001ec947ccaf","ExternDocumentType","623fb2f8-056f-11e1-8525-001ec947ccaf.exml");
         id_00d00f24000000010000000000000000.getMClass().add(id_623fb2f8056f11e18525001ec947ccaf);
-        this.mClass.put("ExternDocumentType",id_623fb2f8056f11e18525001ec947ccaf);// attribute IsHidden
+        this.mClass.put("ExternDocumentType",id_623fb2f8056f11e18525001ec947ccaf);
+        // attribute IsHidden
 
         MAttribute id_7d59ae04056f11e18525001ec947ccaf = new MAttribute("7d59ae04-056f-11e1-8525-001ec947ccaf","IsHidden","623fb2f8-056f-11e1-8525-001ec947ccaf.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_623fb2f8056f11e18525001ec947ccaf.getMAttributes().add(id_7d59ae04056f11e18525001ec947ccaf);
@@ -1694,16 +1673,15 @@ public class MMetamodel {
 
 
 
-
         //## class ExternProcessor ##
 
         MClass id_b6c3f99748ef42529a4770ecbe642cb3 = new MClass("b6c3f997-48ef-4252-9a47-70ecbe642cb3","ExternProcessor","b6c3f997-48ef-4252-9a47-70ecbe642cb3.exml");
         id_00d00f24000000010000000000000000.getMClass().add(id_b6c3f99748ef42529a4770ecbe642cb3);
-        this.mClass.put("ExternProcessor",id_b6c3f99748ef42529a4770ecbe642cb3);// attribute ClassName
+        this.mClass.put("ExternProcessor",id_b6c3f99748ef42529a4770ecbe642cb3);
+        // attribute ClassName
 
         MAttribute id_25c770c22e2949a39f043257a71ebca3 = new MAttribute("25c770c2-2e29-49a3-9f04-3257a71ebca3","ClassName","b6c3f997-48ef-4252-9a47-70ecbe642cb3.exml",this.mBaseTypes.get("string"),false,true,false);
         id_b6c3f99748ef42529a4770ecbe642cb3.getMAttributes().add(id_25c770c22e2949a39f043257a71ebca3);
-
 
 
 
@@ -1716,11 +1694,11 @@ public class MMetamodel {
 
         MClass id_0148033c00000cea0000000000000000 = new MClass("0148033c-0000-0cea-0000-000000000000","Artifact","0148033c-0000-0cea-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0148033c00000cea0000000000000000);
-        this.mClass.put("Artifact",id_0148033c00000cea0000000000000000);// attribute FileName
+        this.mClass.put("Artifact",id_0148033c00000cea0000000000000000);
+        // attribute FileName
 
         MAttribute id_0008152c00001c530000000000000000 = new MAttribute("0008152c-0000-1c53-0000-000000000000","FileName","0148033c-0000-0cea-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000cea0000000000000000.getMAttributes().add(id_0008152c00001c530000000000000000);
-
 
 
 
@@ -1734,7 +1712,8 @@ public class MMetamodel {
 
         MClass id_0148033c00000cb60000000000000000 = new MClass("0148033c-0000-0cb6-0000-000000000000","AssociationEnd","0148033c-0000-0cb6-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0148033c00000cb60000000000000000);
-        this.mClass.put("AssociationEnd",id_0148033c00000cb60000000000000000);// attribute Aggregation
+        this.mClass.put("AssociationEnd",id_0148033c00000cb60000000000000000);
+        // attribute Aggregation
 
         MAttribute id_0148033c00018a8b0000000000000000 = new MAttribute("0148033c-0001-8a8b-0000-000000000000","Aggregation","0148033c-0000-0cb6-0000-000000000000.exml",this.mBaseTypes.get("AggregationKind"),false,true,false);
         id_0148033c00000cb60000000000000000.getMAttributes().add(id_0148033c00018a8b0000000000000000);
@@ -1753,12 +1732,12 @@ public class MMetamodel {
 
 
 
-
         //## class Attribute ##
 
         MClass id_0148033c00000cb20000000000000000 = new MClass("0148033c-0000-0cb2-0000-000000000000","Attribute","0148033c-0000-0cb2-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0148033c00000cb20000000000000000);
-        this.mClass.put("Attribute",id_0148033c00000cb20000000000000000);// attribute TypeConstraint
+        this.mClass.put("Attribute",id_0148033c00000cb20000000000000000);
+        // attribute TypeConstraint
 
         MAttribute id_0148033c00018e900000000000000000 = new MAttribute("0148033c-0001-8e90-0000-000000000000","TypeConstraint","0148033c-0000-0cb2-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000cb20000000000000000.getMAttributes().add(id_0148033c00018e900000000000000000);
@@ -1777,16 +1756,15 @@ public class MMetamodel {
 
 
 
-
         //## class AttributeLink ##
 
         MClass id_0148033c00000cc50000000000000000 = new MClass("0148033c-0000-0cc5-0000-000000000000","AttributeLink","0148033c-0000-0cc5-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0148033c00000cc50000000000000000);
-        this.mClass.put("AttributeLink",id_0148033c00000cc50000000000000000);// attribute Value
+        this.mClass.put("AttributeLink",id_0148033c00000cc50000000000000000);
+        // attribute Value
 
         MAttribute id_0148033c00018f850000000000000000 = new MAttribute("0148033c-0001-8f85-0000-000000000000","Value","0148033c-0000-0cc5-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000cc50000000000000000.getMAttributes().add(id_0148033c00018f850000000000000000);
-
 
 
 
@@ -1812,7 +1790,8 @@ public class MMetamodel {
 
         MClass id_0148033c00000cae0000000000000000 = new MClass("0148033c-0000-0cae-0000-000000000000","Class","0148033c-0000-0cae-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0148033c00000cae0000000000000000);
-        this.mClass.put("Class",id_0148033c00000cae0000000000000000);// attribute IsActive
+        this.mClass.put("Class",id_0148033c00000cae0000000000000000);
+        // attribute IsActive
 
         MAttribute id_0148033c000190820000000000000000 = new MAttribute("0148033c-0001-9082-0000-000000000000","IsActive","0148033c-0000-0cae-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_0148033c00000cae0000000000000000.getMAttributes().add(id_0148033c000190820000000000000000);
@@ -1822,7 +1801,6 @@ public class MMetamodel {
 
         MAttribute id_0148033c0001907f0000000000000000 = new MAttribute("0148033c-0001-907f-0000-000000000000","IsMain","0148033c-0000-0cae-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_0148033c00000cae0000000000000000.getMAttributes().add(id_0148033c0001907f0000000000000000);
-
 
 
 
@@ -1842,11 +1820,11 @@ public class MMetamodel {
 
         MClass id_0148033c00000cc00000000000000000 = new MClass("0148033c-0000-0cc0-0000-000000000000","Collaboration","0148033c-0000-0cc0-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0148033c00000cc00000000000000000);
-        this.mClass.put("Collaboration",id_0148033c00000cc00000000000000000);// attribute IsConcurrent
+        this.mClass.put("Collaboration",id_0148033c00000cc00000000000000000);
+        // attribute IsConcurrent
 
         MAttribute id_0148033c000196210000000000000000 = new MAttribute("0148033c-0001-9621-0000-000000000000","IsConcurrent","0148033c-0000-0cc0-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_0148033c00000cc00000000000000000.getMAttributes().add(id_0148033c000196210000000000000000);
-
 
 
 
@@ -1890,11 +1868,11 @@ public class MMetamodel {
 
         MClass id_0008152c00001bb00000000000000000 = new MClass("0008152c-0000-1bb0-0000-000000000000","ElementImport","0008152c-0000-1bb0-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0008152c00001bb00000000000000000);
-        this.mClass.put("ElementImport",id_0008152c00001bb00000000000000000);// attribute Visibility
+        this.mClass.put("ElementImport",id_0008152c00001bb00000000000000000);
+        // attribute Visibility
 
         MAttribute id_0008152c00001d400000000000000000 = new MAttribute("0008152c-0000-1d40-0000-000000000000","Visibility","0008152c-0000-1bb0-0000-000000000000.exml",this.mBaseTypes.get("VisibilityMode"),false,true,false);
         id_0008152c00001bb00000000000000000.getMAttributes().add(id_0008152c00001d400000000000000000);
-
 
 
 
@@ -1920,7 +1898,8 @@ public class MMetamodel {
 
         MClass id_0148033c00000cb10000000000000000 = new MClass("0148033c-0000-0cb1-0000-000000000000","Feature","0148033c-0000-0cb1-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0148033c00000cb10000000000000000);
-        this.mClass.put("Feature",id_0148033c00000cb10000000000000000);// attribute Visibility
+        this.mClass.put("Feature",id_0148033c00000cb10000000000000000);
+        // attribute Visibility
 
         MAttribute id_0148033c00019ecd0000000000000000 = new MAttribute("0148033c-0001-9ecd-0000-000000000000","Visibility","0148033c-0000-0cb1-0000-000000000000.exml",this.mBaseTypes.get("VisibilityMode"),false,true,false);
         id_0148033c00000cb10000000000000000.getMAttributes().add(id_0148033c00019ecd0000000000000000);
@@ -1939,16 +1918,15 @@ public class MMetamodel {
 
 
 
-
         //## class GeneralClass ##
 
         MClass id_0148033c00000cad0000000000000000 = new MClass("0148033c-0000-0cad-0000-000000000000","GeneralClass","0148033c-0000-0cad-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0148033c00000cad0000000000000000);
-        this.mClass.put("GeneralClass",id_0148033c00000cad0000000000000000);// attribute IsElementary
+        this.mClass.put("GeneralClass",id_0148033c00000cad0000000000000000);
+        // attribute IsElementary
 
         MAttribute id_0148033c00019f900000000000000000 = new MAttribute("0148033c-0001-9f90-0000-000000000000","IsElementary","0148033c-0000-0cad-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_0148033c00000cad0000000000000000.getMAttributes().add(id_0148033c00019f900000000000000000);
-
 
 
 
@@ -1956,11 +1934,11 @@ public class MMetamodel {
 
         MClass id_0148033c00000cb80000000000000000 = new MClass("0148033c-0000-0cb8-0000-000000000000","Generalization","0148033c-0000-0cb8-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0148033c00000cb80000000000000000);
-        this.mClass.put("Generalization",id_0148033c00000cb80000000000000000);// attribute Discriminator
+        this.mClass.put("Generalization",id_0148033c00000cb80000000000000000);
+        // attribute Discriminator
 
         MAttribute id_0148033c0001a0830000000000000000 = new MAttribute("0148033c-0001-a083-0000-000000000000","Discriminator","0148033c-0000-0cb8-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000cb80000000000000000.getMAttributes().add(id_0148033c0001a0830000000000000000);
-
 
 
 
@@ -1968,7 +1946,8 @@ public class MMetamodel {
 
         MClass id_0148033c00000cc30000000000000000 = new MClass("0148033c-0000-0cc3-0000-000000000000","Instance","0148033c-0000-0cc3-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0148033c00000cc30000000000000000);
-        this.mClass.put("Instance",id_0148033c00000cc30000000000000000);// attribute IsConstant
+        this.mClass.put("Instance",id_0148033c00000cc30000000000000000);
+        // attribute IsConstant
 
         MAttribute id_0008152c000021470000000000000000 = new MAttribute("0008152c-0000-2147-0000-000000000000","IsConstant","0148033c-0000-0cc3-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_0148033c00000cc30000000000000000.getMAttributes().add(id_0008152c000021470000000000000000);
@@ -1990,7 +1969,6 @@ public class MMetamodel {
 
         MAttribute id_0008152c0000214b0000000000000000 = new MAttribute("0008152c-0000-214b-0000-000000000000","Value","0148033c-0000-0cc3-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000cc30000000000000000.getMAttributes().add(id_0008152c0000214b0000000000000000);
-
 
 
 
@@ -2016,7 +1994,8 @@ public class MMetamodel {
 
         MClass id_0148033c00000ccc0000000000000000 = new MClass("0148033c-0000-0ccc-0000-000000000000","LinkEnd","0148033c-0000-0ccc-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0148033c00000ccc0000000000000000);
-        this.mClass.put("LinkEnd",id_0148033c00000ccc0000000000000000);// attribute IsOrdered
+        this.mClass.put("LinkEnd",id_0148033c00000ccc0000000000000000);
+        // attribute IsOrdered
 
         MAttribute id_0008152c00001beb0000000000000000 = new MAttribute("0008152c-0000-1beb-0000-000000000000","IsOrdered","0148033c-0000-0ccc-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_0148033c00000ccc0000000000000000.getMAttributes().add(id_0008152c00001beb0000000000000000);
@@ -2047,7 +2026,6 @@ public class MMetamodel {
 
 
 
-
         //## class Manifestation ##
 
         MClass id_0008152c00001bb60000000000000000 = new MClass("0008152c-0000-1bb6-0000-000000000000","Manifestation","0008152c-0000-1bb6-0000-000000000000.exml");
@@ -2058,7 +2036,8 @@ public class MMetamodel {
 
         MClass id_0148033c00000caa0000000000000000 = new MClass("0148033c-0000-0caa-0000-000000000000","NameSpace","0148033c-0000-0caa-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0148033c00000caa0000000000000000);
-        this.mClass.put("NameSpace",id_0148033c00000caa0000000000000000);// attribute IsAbstract
+        this.mClass.put("NameSpace",id_0148033c00000caa0000000000000000);
+        // attribute IsAbstract
 
         MAttribute id_0148033c0001a9aa0000000000000000 = new MAttribute("0148033c-0001-a9aa-0000-000000000000","IsAbstract","0148033c-0000-0caa-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_0148033c00000caa0000000000000000.getMAttributes().add(id_0148033c0001a9aa0000000000000000);
@@ -2080,7 +2059,6 @@ public class MMetamodel {
 
         MAttribute id_0148033c0001a9b30000000000000000 = new MAttribute("0148033c-0001-a9b3-0000-000000000000","Visibility","0148033c-0000-0caa-0000-000000000000.exml",this.mBaseTypes.get("VisibilityMode"),false,true,false);
         id_0148033c00000caa0000000000000000.getMAttributes().add(id_0148033c0001a9b30000000000000000);
-
 
 
 
@@ -2124,7 +2102,8 @@ public class MMetamodel {
 
         MClass id_00139d9a131a10a188a0001ec947cd2a = new MClass("00139d9a-131a-10a1-88a0-001ec947cd2a","NaryLinkEnd","00139d9a-131a-10a1-88a0-001ec947cd2a.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_00139d9a131a10a188a0001ec947cd2a);
-        this.mClass.put("NaryLinkEnd",id_00139d9a131a10a188a0001ec947cd2a);// attribute IsOrdered
+        this.mClass.put("NaryLinkEnd",id_00139d9a131a10a188a0001ec947cd2a);
+        // attribute IsOrdered
 
         MAttribute id_0013a7a4131a10a188a0001ec947cd2a = new MAttribute("0013a7a4-131a-10a1-88a0-001ec947cd2a","IsOrdered","00139d9a-131a-10a1-88a0-001ec947cd2a.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_00139d9a131a10a188a0001ec947cd2a.getMAttributes().add(id_0013a7a4131a10a188a0001ec947cd2a);
@@ -2149,7 +2128,6 @@ public class MMetamodel {
 
 
 
-
         //## class Node ##
 
         MClass id_0148033c00000ce90000000000000000 = new MClass("0148033c-0000-0ce9-0000-000000000000","Node","0148033c-0000-0ce9-0000-000000000000.exml");
@@ -2160,7 +2138,8 @@ public class MMetamodel {
 
         MClass id_0148033c00000cb30000000000000000 = new MClass("0148033c-0000-0cb3-0000-000000000000","Operation","0148033c-0000-0cb3-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0148033c00000cb30000000000000000);
-        this.mClass.put("Operation",id_0148033c00000cb30000000000000000);// attribute Concurrency
+        this.mClass.put("Operation",id_0148033c00000cb30000000000000000);
+        // attribute Concurrency
 
         MAttribute id_0148033c0001aef10000000000000000 = new MAttribute("0148033c-0001-aef1-0000-000000000000","Concurrency","0148033c-0000-0cb3-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_0148033c00000cb30000000000000000.getMAttributes().add(id_0148033c0001aef10000000000000000);
@@ -2179,16 +2158,15 @@ public class MMetamodel {
 
 
 
-
         //## class Package ##
 
         MClass id_0148033c00000cab0000000000000000 = new MClass("0148033c-0000-0cab-0000-000000000000","Package","0148033c-0000-0cab-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0148033c00000cab0000000000000000);
-        this.mClass.put("Package",id_0148033c00000cab0000000000000000);// attribute IsInstantiable
+        this.mClass.put("Package",id_0148033c00000cab0000000000000000);
+        // attribute IsInstantiable
 
         MAttribute id_0148033c0001b0d50000000000000000 = new MAttribute("0148033c-0001-b0d5-0000-000000000000","IsInstantiable","0148033c-0000-0cab-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_0148033c00000cab0000000000000000.getMAttributes().add(id_0148033c0001b0d50000000000000000);
-
 
 
 
@@ -2196,11 +2174,11 @@ public class MMetamodel {
 
         MClass id_0008152c00001bb10000000000000000 = new MClass("0008152c-0000-1bb1-0000-000000000000","PackageImport","0008152c-0000-1bb1-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0008152c00001bb10000000000000000);
-        this.mClass.put("PackageImport",id_0008152c00001bb10000000000000000);// attribute Visibility
+        this.mClass.put("PackageImport",id_0008152c00001bb10000000000000000);
+        // attribute Visibility
 
         MAttribute id_0008152c00001d420000000000000000 = new MAttribute("0008152c-0000-1d42-0000-000000000000","Visibility","0008152c-0000-1bb1-0000-000000000000.exml",this.mBaseTypes.get("VisibilityMode"),false,true,false);
         id_0008152c00001bb10000000000000000.getMAttributes().add(id_0008152c00001d420000000000000000);
-
 
 
 
@@ -2214,7 +2192,8 @@ public class MMetamodel {
 
         MClass id_0148033c00000cb40000000000000000 = new MClass("0148033c-0000-0cb4-0000-000000000000","Parameter","0148033c-0000-0cb4-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0148033c00000cb40000000000000000);
-        this.mClass.put("Parameter",id_0148033c00000cb40000000000000000);// attribute ParameterPassing
+        this.mClass.put("Parameter",id_0148033c00000cb40000000000000000);
+        // attribute ParameterPassing
 
         MAttribute id_0148033c0001b26a0000000000000000 = new MAttribute("0148033c-0001-b26a-0000-000000000000","ParameterPassing","0148033c-0000-0cb4-0000-000000000000.exml",this.mBaseTypes.get("PassingMode"),false,true,false);
         id_0148033c00000cb40000000000000000.getMAttributes().add(id_0148033c0001b26a0000000000000000);
@@ -2275,12 +2254,12 @@ public class MMetamodel {
 
 
 
-
         //## class Port ##
 
         MClass id_0008152c00001bb20000000000000000 = new MClass("0008152c-0000-1bb2-0000-000000000000","Port","0008152c-0000-1bb2-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0008152c00001bb20000000000000000);
-        this.mClass.put("Port",id_0008152c00001bb20000000000000000);// attribute IsBehavior
+        this.mClass.put("Port",id_0008152c00001bb20000000000000000);
+        // attribute IsBehavior
 
         MAttribute id_0008152c00001d7d0000000000000000 = new MAttribute("0008152c-0000-1d7d-0000-000000000000","IsBehavior","0008152c-0000-1bb2-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_0008152c00001bb20000000000000000.getMAttributes().add(id_0008152c00001d7d0000000000000000);
@@ -2302,7 +2281,6 @@ public class MMetamodel {
 
         MAttribute id_1a55012abba011e1ac85001ec947ccaf = new MAttribute("1a55012a-bba0-11e1-ac85-001ec947ccaf","Direction","0008152c-0000-1bb2-0000-000000000000.exml",this.mBaseTypes.get("PortOrientation"),false,true,false);
         id_0008152c00001bb20000000000000000.getMAttributes().add(id_1a55012abba011e1ac85001ec947ccaf);
-
 
 
 
@@ -2328,7 +2306,8 @@ public class MMetamodel {
 
         MClass id_000565eacbd41f43b54d001ec947cd2a = new MClass("000565ea-cbd4-1f43-b54d-001ec947cd2a","StructuralFeature","000565ea-cbd4-1f43-b54d-001ec947cd2a.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_000565eacbd41f43b54d001ec947cd2a);
-        this.mClass.put("StructuralFeature",id_000565eacbd41f43b54d001ec947cd2a);// attribute Changeable
+        this.mClass.put("StructuralFeature",id_000565eacbd41f43b54d001ec947cd2a);
+        // attribute Changeable
 
         MAttribute id_0148033c00018e950000000000000000 = new MAttribute("0148033c-0001-8e95-0000-000000000000","Changeable","000565ea-cbd4-1f43-b54d-001ec947cd2a.exml",this.mBaseTypes.get("KindOfAccess"),false,true,false);
         id_000565eacbd41f43b54d001ec947cd2a.getMAttributes().add(id_0148033c00018e950000000000000000);
@@ -2365,7 +2344,6 @@ public class MMetamodel {
 
 
 
-
         //## class TemplateBinding ##
 
         MClass id_0008152c00001bb40000000000000000 = new MClass("0008152c-0000-1bb4-0000-000000000000","TemplateBinding","0008152c-0000-1bb4-0000-000000000000.exml");
@@ -2376,7 +2354,8 @@ public class MMetamodel {
 
         MClass id_0148033c00000cba0000000000000000 = new MClass("0148033c-0000-0cba-0000-000000000000","TemplateParameter","0148033c-0000-0cba-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0148033c00000cba0000000000000000);
-        this.mClass.put("TemplateParameter",id_0148033c00000cba0000000000000000);// attribute DefaultValue
+        this.mClass.put("TemplateParameter",id_0148033c00000cba0000000000000000);
+        // attribute DefaultValue
 
         MAttribute id_0008152c00001bf70000000000000000 = new MAttribute("0008152c-0000-1bf7-0000-000000000000","DefaultValue","0148033c-0000-0cba-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000cba0000000000000000.getMAttributes().add(id_0008152c00001bf70000000000000000);
@@ -2389,16 +2368,15 @@ public class MMetamodel {
 
 
 
-
         //## class TemplateParameterSubstitution ##
 
         MClass id_0008152c00001bb50000000000000000 = new MClass("0008152c-0000-1bb5-0000-000000000000","TemplateParameterSubstitution","0008152c-0000-1bb5-0000-000000000000.exml");
         id_00d00f24000000020000000000000000.getMClass().add(id_0008152c00001bb50000000000000000);
-        this.mClass.put("TemplateParameterSubstitution",id_0008152c00001bb50000000000000000);// attribute Value
+        this.mClass.put("TemplateParameterSubstitution",id_0008152c00001bb50000000000000000);
+        // attribute Value
 
         MAttribute id_0008152c00001bf90000000000000000 = new MAttribute("0008152c-0000-1bf9-0000-000000000000","Value","0008152c-0000-1bb5-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0008152c00001bb50000000000000000.getMAttributes().add(id_0008152c00001bf90000000000000000);
-
 
 
 
@@ -2420,11 +2398,11 @@ public class MMetamodel {
 
         MClass id_00d00f24000009880000000000000000 = new MClass("00d00f24-0000-0988-0000-000000000000","AcceptChangeEventAction","00d00f24-0000-0988-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_00d00f24000009880000000000000000);
-        this.mClass.put("AcceptChangeEventAction",id_00d00f24000009880000000000000000);// attribute ChangeExpresion
+        this.mClass.put("AcceptChangeEventAction",id_00d00f24000009880000000000000000);
+        // attribute ChangeExpresion
 
         MAttribute id_00d012d80001ee2e0000000000000000 = new MAttribute("00d012d8-0001-ee2e-0000-000000000000","ChangeExpresion","00d00f24-0000-0988-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_00d00f24000009880000000000000000.getMAttributes().add(id_00d012d80001ee2e0000000000000000);
-
 
 
 
@@ -2438,11 +2416,11 @@ public class MMetamodel {
 
         MClass id_00d012d80001edef0000000000000000 = new MClass("00d012d8-0001-edef-0000-000000000000","AcceptTimeEventAction","00d012d8-0001-edef-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_00d012d80001edef0000000000000000);
-        this.mClass.put("AcceptTimeEventAction",id_00d012d80001edef0000000000000000);// attribute TimeExpresion
+        this.mClass.put("AcceptTimeEventAction",id_00d012d80001edef0000000000000000);
+        // attribute TimeExpresion
 
         MAttribute id_00d012d80001ee2b0000000000000000 = new MAttribute("00d012d8-0001-ee2b-0000-000000000000","TimeExpresion","00d012d8-0001-edef-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_00d012d80001edef0000000000000000.getMAttributes().add(id_00d012d80001ee2b0000000000000000);
-
 
 
 
@@ -2450,7 +2428,8 @@ public class MMetamodel {
 
         MClass id_0008152c00001c930000000000000000 = new MClass("0008152c-0000-1c93-0000-000000000000","Activity","0008152c-0000-1c93-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_0008152c00001c930000000000000000);
-        this.mClass.put("Activity",id_0008152c00001c930000000000000000);// attribute IsSingleExecution
+        this.mClass.put("Activity",id_0008152c00001c930000000000000000);
+        // attribute IsSingleExecution
 
         MAttribute id_00d00f24000009e00000000000000000 = new MAttribute("00d00f24-0000-09e0-0000-000000000000","IsSingleExecution","0008152c-0000-1c93-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_0008152c00001c930000000000000000.getMAttributes().add(id_00d00f24000009e00000000000000000);
@@ -2463,12 +2442,12 @@ public class MMetamodel {
 
 
 
-
         //## class ActivityAction ##
 
         MClass id_00d00f240000094c0000000000000000 = new MClass("00d00f24-0000-094c-0000-000000000000","ActivityAction","00d00f24-0000-094c-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_00d00f240000094c0000000000000000);
-        this.mClass.put("ActivityAction",id_00d00f240000094c0000000000000000);// attribute IsMultipleInstance
+        this.mClass.put("ActivityAction",id_00d00f240000094c0000000000000000);
+        // attribute IsMultipleInstance
 
         MAttribute id_00d00f2400000a0a0000000000000000 = new MAttribute("00d00f24-0000-0a0a-0000-000000000000","IsMultipleInstance","00d00f24-0000-094c-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_00d00f240000094c0000000000000000.getMAttributes().add(id_00d00f2400000a0a0000000000000000);
@@ -2481,12 +2460,12 @@ public class MMetamodel {
 
 
 
-
         //## class ActivityEdge ##
 
         MClass id_00d00f240000094e0000000000000000 = new MClass("00d00f24-0000-094e-0000-000000000000","ActivityEdge","00d00f24-0000-094e-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_00d00f240000094e0000000000000000);
-        this.mClass.put("ActivityEdge",id_00d00f240000094e0000000000000000);// attribute Guard
+        this.mClass.put("ActivityEdge",id_00d00f240000094e0000000000000000);
+        // attribute Guard
 
         MAttribute id_00d00f24000009640000000000000000 = new MAttribute("00d00f24-0000-0964-0000-000000000000","Guard","00d00f24-0000-094e-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_00d00f240000094e0000000000000000.getMAttributes().add(id_00d00f24000009640000000000000000);
@@ -2496,7 +2475,6 @@ public class MMetamodel {
 
         MAttribute id_00d00f24000009660000000000000000 = new MAttribute("00d00f24-0000-0966-0000-000000000000","Weight","00d00f24-0000-094e-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_00d00f240000094e0000000000000000.getMAttributes().add(id_00d00f24000009660000000000000000);
-
 
 
 
@@ -2528,7 +2506,8 @@ public class MMetamodel {
 
         MClass id_00d00f24000009920000000000000000 = new MClass("00d00f24-0000-0992-0000-000000000000","ActivityPartition","00d00f24-0000-0992-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_00d00f24000009920000000000000000);
-        this.mClass.put("ActivityPartition",id_00d00f24000009920000000000000000);// attribute IsDimension
+        this.mClass.put("ActivityPartition",id_00d00f24000009920000000000000000);
+        // attribute IsDimension
 
         MAttribute id_00d00f24000009d40000000000000000 = new MAttribute("00d00f24-0000-09d4-0000-000000000000","IsDimension","00d00f24-0000-0992-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_00d00f24000009920000000000000000.getMAttributes().add(id_00d00f24000009d40000000000000000);
@@ -2541,16 +2520,15 @@ public class MMetamodel {
 
 
 
-
         //## class CallAction ##
 
         MClass id_00d00f24000009820000000000000000 = new MClass("00d00f24-0000-0982-0000-000000000000","CallAction","00d00f24-0000-0982-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_00d00f24000009820000000000000000);
-        this.mClass.put("CallAction",id_00d00f24000009820000000000000000);// attribute IsSynchronous
+        this.mClass.put("CallAction",id_00d00f24000009820000000000000000);
+        // attribute IsSynchronous
 
         MAttribute id_00d00f2400000d1a0000000000000000 = new MAttribute("00d00f24-0000-0d1a-0000-000000000000","IsSynchronous","00d00f24-0000-0982-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_00d00f24000009820000000000000000.getMAttributes().add(id_00d00f2400000d1a0000000000000000);
-
 
 
 
@@ -2576,11 +2554,11 @@ public class MMetamodel {
 
         MClass id_00d012d80002e9f80000000000000000 = new MClass("00d012d8-0002-e9f8-0000-000000000000","Clause","00d012d8-0002-e9f8-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_00d012d80002e9f80000000000000000);
-        this.mClass.put("Clause",id_00d012d80002e9f80000000000000000);// attribute Test
+        this.mClass.put("Clause",id_00d012d80002e9f80000000000000000);
+        // attribute Test
 
         MAttribute id_00d012d80002eaa30000000000000000 = new MAttribute("00d012d8-0002-eaa3-0000-000000000000","Test","00d012d8-0002-e9f8-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_00d012d80002e9f80000000000000000.getMAttributes().add(id_00d012d80002eaa30000000000000000);
-
 
 
 
@@ -2588,7 +2566,8 @@ public class MMetamodel {
 
         MClass id_00d00f24000009840000000000000000 = new MClass("00d00f24-0000-0984-0000-000000000000","ConditionalNode","00d00f24-0000-0984-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_00d00f24000009840000000000000000);
-        this.mClass.put("ConditionalNode",id_00d00f24000009840000000000000000);// attribute IsDeterminate
+        this.mClass.put("ConditionalNode",id_00d00f24000009840000000000000000);
+        // attribute IsDeterminate
 
         MAttribute id_00d00f2400000a100000000000000000 = new MAttribute("00d00f24-0000-0a10-0000-000000000000","IsDeterminate","00d00f24-0000-0984-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_00d00f24000009840000000000000000.getMAttributes().add(id_00d00f2400000a100000000000000000);
@@ -2598,7 +2577,6 @@ public class MMetamodel {
 
         MAttribute id_00d00f2400000a120000000000000000 = new MAttribute("00d00f24-0000-0a12-0000-000000000000","IsAssured","00d00f24-0000-0984-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_00d00f24000009840000000000000000.getMAttributes().add(id_00d00f2400000a120000000000000000);
-
 
 
 
@@ -2624,7 +2602,8 @@ public class MMetamodel {
 
         MClass id_00d00f2400000a940000000000000000 = new MClass("00d00f24-0000-0a94-0000-000000000000","DecisionMergeNode","00d00f24-0000-0a94-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_00d00f2400000a940000000000000000);
-        this.mClass.put("DecisionMergeNode",id_00d00f2400000a940000000000000000);// attribute DecisionKind
+        this.mClass.put("DecisionMergeNode",id_00d00f2400000a940000000000000000);
+        // attribute DecisionKind
 
         MAttribute id_00d00f2400000aae0000000000000000 = new MAttribute("00d00f24-0000-0aae-0000-000000000000","DecisionKind","00d00f24-0000-0a94-0000-000000000000.exml",this.mBaseTypes.get("DecisionNodeKind"),false,true,false);
         id_00d00f2400000a940000000000000000.getMAttributes().add(id_00d00f2400000aae0000000000000000);
@@ -2637,12 +2616,12 @@ public class MMetamodel {
 
 
 
-
         //## class ExceptionHandler ##
 
         MClass id_abfcfba6f87c11dfa2c5001ec947ccaf = new MClass("abfcfba6-f87c-11df-a2c5-001ec947ccaf","ExceptionHandler","abfcfba6-f87c-11df-a2c5-001ec947ccaf.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_abfcfba6f87c11dfa2c5001ec947ccaf);
-        this.mClass.put("ExceptionHandler",id_abfcfba6f87c11dfa2c5001ec947ccaf);// attribute Guard
+        this.mClass.put("ExceptionHandler",id_abfcfba6f87c11dfa2c5001ec947ccaf);
+        // attribute Guard
 
         MAttribute id_abfcfbaef87c11dfa2c5001ec947ccaf = new MAttribute("abfcfbae-f87c-11df-a2c5-001ec947ccaf","Guard","abfcfba6-f87c-11df-a2c5-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_abfcfba6f87c11dfa2c5001ec947ccaf.getMAttributes().add(id_abfcfbaef87c11dfa2c5001ec947ccaf);
@@ -2652,7 +2631,6 @@ public class MMetamodel {
 
         MAttribute id_abfcfb9ff87c11dfa2c5001ec947ccaf = new MAttribute("abfcfb9f-f87c-11df-a2c5-001ec947ccaf","Weight","abfcfba6-f87c-11df-a2c5-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_abfcfba6f87c11dfa2c5001ec947ccaf.getMAttributes().add(id_abfcfb9ff87c11dfa2c5001ec947ccaf);
-
 
 
 
@@ -2666,11 +2644,11 @@ public class MMetamodel {
 
         MClass id_f0e31419f87711dfa2c5001ec947ccaf = new MClass("f0e31419-f877-11df-a2c5-001ec947ccaf","ExpansionRegion","f0e31419-f877-11df-a2c5-001ec947ccaf.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_f0e31419f87711dfa2c5001ec947ccaf);
-        this.mClass.put("ExpansionRegion",id_f0e31419f87711dfa2c5001ec947ccaf);// attribute Mode
+        this.mClass.put("ExpansionRegion",id_f0e31419f87711dfa2c5001ec947ccaf);
+        // attribute Mode
 
         MAttribute id_f0e31416f87711dfa2c5001ec947ccaf = new MAttribute("f0e31416-f877-11df-a2c5-001ec947ccaf","Mode","f0e31419-f877-11df-a2c5-001ec947ccaf.exml",this.mBaseTypes.get("ExpansionKind"),false,true,false);
         id_f0e31419f87711dfa2c5001ec947ccaf.getMAttributes().add(id_f0e31416f87711dfa2c5001ec947ccaf);
-
 
 
 
@@ -2690,7 +2668,8 @@ public class MMetamodel {
 
         MClass id_00d00f2400000a900000000000000000 = new MClass("00d00f24-0000-0a90-0000-000000000000","ForkJoinNode","00d00f24-0000-0a90-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_00d00f2400000a900000000000000000);
-        this.mClass.put("ForkJoinNode",id_00d00f2400000a900000000000000000);// attribute IsCombineDuplicate
+        this.mClass.put("ForkJoinNode",id_00d00f2400000a900000000000000000);
+        // attribute IsCombineDuplicate
 
         MAttribute id_00d00f2400000ab20000000000000000 = new MAttribute("00d00f24-0000-0ab2-0000-000000000000","IsCombineDuplicate","00d00f24-0000-0a90-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_00d00f2400000a900000000000000000.getMAttributes().add(id_00d00f2400000ab20000000000000000);
@@ -2700,7 +2679,6 @@ public class MMetamodel {
 
         MAttribute id_00d00f2400000ab50000000000000000 = new MAttribute("00d00f24-0000-0ab5-0000-000000000000","JoinSpec","00d00f24-0000-0a90-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_00d00f2400000a900000000000000000.getMAttributes().add(id_00d00f2400000ab50000000000000000);
-
 
 
 
@@ -2714,11 +2692,11 @@ public class MMetamodel {
 
         MClass id_00d012d800096b900000000000000000 = new MClass("00d012d8-0009-6b90-0000-000000000000","InputPin","00d012d8-0009-6b90-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_00d012d800096b900000000000000000);
-        this.mClass.put("InputPin",id_00d012d800096b900000000000000000);// attribute IsSelf
+        this.mClass.put("InputPin",id_00d012d800096b900000000000000000);
+        // attribute IsSelf
 
         MAttribute id_00d012d800096baa0000000000000000 = new MAttribute("00d012d8-0009-6baa-0000-000000000000","IsSelf","00d012d8-0009-6b90-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_00d012d800096b900000000000000000.getMAttributes().add(id_00d012d800096baa0000000000000000);
-
 
 
 
@@ -2738,7 +2716,8 @@ public class MMetamodel {
 
         MClass id_00d00f24000009860000000000000000 = new MClass("00d00f24-0000-0986-0000-000000000000","LoopNode","00d00f24-0000-0986-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_00d00f24000009860000000000000000);
-        this.mClass.put("LoopNode",id_00d00f24000009860000000000000000);// attribute IsTestedFirst
+        this.mClass.put("LoopNode",id_00d00f24000009860000000000000000);
+        // attribute IsTestedFirst
 
         MAttribute id_00d00f2400000a0e0000000000000000 = new MAttribute("00d00f24-0000-0a0e-0000-000000000000","IsTestedFirst","00d00f24-0000-0986-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_00d00f24000009860000000000000000.getMAttributes().add(id_00d00f2400000a0e0000000000000000);
@@ -2757,7 +2736,6 @@ public class MMetamodel {
 
 
 
-
         //## class MessageFlow ##
 
         MClass id_00d00f24000009900000000000000000 = new MClass("00d00f24-0000-0990-0000-000000000000","MessageFlow","00d00f24-0000-0990-0000-000000000000.exml");
@@ -2768,7 +2746,8 @@ public class MMetamodel {
 
         MClass id_00d00f240000098c0000000000000000 = new MClass("00d00f24-0000-098c-0000-000000000000","ObjectFlow","00d00f24-0000-098c-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_00d00f240000098c0000000000000000);
-        this.mClass.put("ObjectFlow",id_00d00f240000098c0000000000000000);// attribute TransformationBehavior
+        this.mClass.put("ObjectFlow",id_00d00f240000098c0000000000000000);
+        // attribute TransformationBehavior
 
         MAttribute id_00d00f2400000a150000000000000000 = new MAttribute("00d00f24-0000-0a15-0000-000000000000","TransformationBehavior","00d00f24-0000-098c-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_00d00f240000098c0000000000000000.getMAttributes().add(id_00d00f2400000a150000000000000000);
@@ -2799,12 +2778,12 @@ public class MMetamodel {
 
 
 
-
         //## class ObjectNode ##
 
         MClass id_00d00f240000097a0000000000000000 = new MClass("00d00f24-0000-097a-0000-000000000000","ObjectNode","00d00f24-0000-097a-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_00d00f240000097a0000000000000000);
-        this.mClass.put("ObjectNode",id_00d00f240000097a0000000000000000);// attribute IsControlType
+        this.mClass.put("ObjectNode",id_00d00f240000097a0000000000000000);
+        // attribute IsControlType
 
         MAttribute id_00d00f2400000cd40000000000000000 = new MAttribute("00d00f24-0000-0cd4-0000-000000000000","IsControlType","00d00f24-0000-097a-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_00d00f240000097a0000000000000000.getMAttributes().add(id_00d00f2400000cd40000000000000000);
@@ -2829,16 +2808,15 @@ public class MMetamodel {
 
 
 
-
         //## class OpaqueAction ##
 
         MClass id_00d00f2400000d9f0000000000000000 = new MClass("00d00f24-0000-0d9f-0000-000000000000","OpaqueAction","00d00f24-0000-0d9f-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_00d00f2400000d9f0000000000000000);
-        this.mClass.put("OpaqueAction",id_00d00f2400000d9f0000000000000000);// attribute Body
+        this.mClass.put("OpaqueAction",id_00d00f2400000d9f0000000000000000);
+        // attribute Body
 
         MAttribute id_00d00f2400000da10000000000000000 = new MAttribute("00d00f24-0000-0da1-0000-000000000000","Body","00d00f24-0000-0d9f-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_00d00f2400000d9f0000000000000000.getMAttributes().add(id_00d00f2400000da10000000000000000);
-
 
 
 
@@ -2852,7 +2830,8 @@ public class MMetamodel {
 
         MClass id_00d00f240000097c0000000000000000 = new MClass("00d00f24-0000-097c-0000-000000000000","Pin","00d00f24-0000-097c-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_00d00f240000097c0000000000000000);
-        this.mClass.put("Pin",id_00d00f240000097c0000000000000000);// attribute IsControl
+        this.mClass.put("Pin",id_00d00f240000097c0000000000000000);
+        // attribute IsControl
 
         MAttribute id_00d00f24000009d80000000000000000 = new MAttribute("00d00f24-0000-09d8-0000-000000000000","IsControl","00d00f24-0000-097c-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_00d00f240000097c0000000000000000.getMAttributes().add(id_00d00f24000009d80000000000000000);
@@ -2862,7 +2841,6 @@ public class MMetamodel {
 
         MAttribute id_00d00f24000009db0000000000000000 = new MAttribute("00d00f24-0000-09db-0000-000000000000","IsExpansion","00d00f24-0000-097c-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_00d00f240000097c0000000000000000.getMAttributes().add(id_00d00f24000009db0000000000000000);
-
 
 
 
@@ -2876,11 +2854,11 @@ public class MMetamodel {
 
         MClass id_00d00f24000009800000000000000000 = new MClass("00d00f24-0000-0980-0000-000000000000","StructuredActivityNode","00d00f24-0000-0980-0000-000000000000.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_00d00f24000009800000000000000000);
-        this.mClass.put("StructuredActivityNode",id_00d00f24000009800000000000000000);// attribute MustIsolate
+        this.mClass.put("StructuredActivityNode",id_00d00f24000009800000000000000000);
+        // attribute MustIsolate
 
         MAttribute id_00d00f2400000dca0000000000000000 = new MAttribute("00d00f24-0000-0dca-0000-000000000000","MustIsolate","00d00f24-0000-0980-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_00d00f24000009800000000000000000.getMAttributes().add(id_00d00f2400000dca0000000000000000);
-
 
 
 
@@ -2888,11 +2866,11 @@ public class MMetamodel {
 
         MClass id_dcb5c3c1038011e08bdf001ec947ccaf = new MClass("dcb5c3c1-0380-11e0-8bdf-001ec947ccaf","ValuePin","dcb5c3c1-0380-11e0-8bdf-001ec947ccaf.exml");
         id_00d00f24000008f60000000000000000.getMClass().add(id_dcb5c3c1038011e08bdf001ec947ccaf);
-        this.mClass.put("ValuePin",id_dcb5c3c1038011e08bdf001ec947ccaf);// attribute Value
+        this.mClass.put("ValuePin",id_dcb5c3c1038011e08bdf001ec947ccaf);
+        // attribute Value
 
         MAttribute id_dcb5c3d7038011e08bdf001ec947ccaf = new MAttribute("dcb5c3d7-0380-11e0-8bdf-001ec947ccaf","Value","dcb5c3c1-0380-11e0-8bdf-001ec947ccaf.exml",this.mBaseTypes.get("string"),false,true,false);
         id_dcb5c3c1038011e08bdf001ec947ccaf.getMAttributes().add(id_dcb5c3d7038011e08bdf001ec947ccaf);
-
 
 
 
@@ -2905,11 +2883,11 @@ public class MMetamodel {
 
         MClass id_0008152c00001bac0000000000000000 = new MClass("0008152c-0000-1bac-0000-000000000000","Behavior","0008152c-0000-1bac-0000-000000000000.exml");
         id_00d00f24000009520000000000000000.getMClass().add(id_0008152c00001bac0000000000000000);
-        this.mClass.put("Behavior",id_0008152c00001bac0000000000000000);// attribute IsReentrant
+        this.mClass.put("Behavior",id_0008152c00001bac0000000000000000);
+        // attribute IsReentrant
 
         MAttribute id_00d00f24000009ed0000000000000000 = new MAttribute("00d00f24-0000-09ed-0000-000000000000","IsReentrant","0008152c-0000-1bac-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_0008152c00001bac0000000000000000.getMAttributes().add(id_00d00f24000009ed0000000000000000);
-
 
 
 
@@ -2923,11 +2901,11 @@ public class MMetamodel {
 
         MClass id_00d00f24000009e50000000000000000 = new MClass("00d00f24-0000-09e5-0000-000000000000","OpaqueBehavior","00d00f24-0000-09e5-0000-000000000000.exml");
         id_00d00f24000009520000000000000000.getMClass().add(id_00d00f24000009e50000000000000000);
-        this.mClass.put("OpaqueBehavior",id_00d00f24000009e50000000000000000);// attribute Body
+        this.mClass.put("OpaqueBehavior",id_00d00f24000009e50000000000000000);
+        // attribute Body
 
         MAttribute id_00d00f2400000d170000000000000000 = new MAttribute("00d00f24-0000-0d17-0000-000000000000","Body","00d00f24-0000-09e5-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_00d00f24000009e50000000000000000.getMAttributes().add(id_00d00f2400000d170000000000000000);
-
 
 
 
@@ -2935,7 +2913,8 @@ public class MMetamodel {
 
         MClass id_0148033c00000cbe0000000000000000 = new MClass("0148033c-0000-0cbe-0000-000000000000","Signal","0148033c-0000-0cbe-0000-000000000000.exml");
         id_00d00f24000009520000000000000000.getMClass().add(id_0148033c00000cbe0000000000000000);
-        this.mClass.put("Signal",id_0148033c00000cbe0000000000000000);// attribute IsEvent
+        this.mClass.put("Signal",id_0148033c00000cbe0000000000000000);
+        // attribute IsEvent
 
         MAttribute id_0148033c0001b8670000000000000000 = new MAttribute("0148033c-0001-b867-0000-000000000000","IsEvent","0148033c-0000-0cbe-0000-000000000000.exml",this.mBaseTypes.get("boolean"),false,true,false);
         id_0148033c00000cbe0000000000000000.getMAttributes().add(id_0148033c0001b8670000000000000000);
@@ -2948,12 +2927,12 @@ public class MMetamodel {
 
 
 
-
         //## class Event ##
 
         MClass id_0148033c00000ce80000000000000000 = new MClass("0148033c-0000-0ce8-0000-000000000000","Event","0148033c-0000-0ce8-0000-000000000000.exml");
         id_00d00f24000009520000000000000000.getMClass().add(id_0148033c00000ce80000000000000000);
-        this.mClass.put("Event",id_0148033c00000ce80000000000000000);// attribute Expression
+        this.mClass.put("Event",id_0148033c00000ce80000000000000000);
+        // attribute Expression
 
         MAttribute id_0148033c00019dc70000000000000000 = new MAttribute("0148033c-0001-9dc7-0000-000000000000","Expression","0148033c-0000-0ce8-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000ce80000000000000000.getMAttributes().add(id_0148033c00019dc70000000000000000);
@@ -2963,7 +2942,6 @@ public class MMetamodel {
 
         MAttribute id_0148033c00019dc30000000000000000 = new MAttribute("0148033c-0001-9dc3-0000-000000000000","Kind","0148033c-0000-0ce8-0000-000000000000.exml",this.mBaseTypes.get("EventType"),false,true,false);
         id_0148033c00000ce80000000000000000.getMAttributes().add(id_0148033c00019dc30000000000000000);
-
 
 
 
@@ -2987,11 +2965,11 @@ public class MMetamodel {
 
         MClass id_00d00f2400000fd20000000000000000 = new MClass("00d00f24-0000-0fd2-0000-000000000000","CombinedFragment","00d00f24-0000-0fd2-0000-000000000000.exml");
         id_00d00f2400000b150000000000000000.getMClass().add(id_00d00f2400000fd20000000000000000);
-        this.mClass.put("CombinedFragment",id_00d00f2400000fd20000000000000000);// attribute Operator
+        this.mClass.put("CombinedFragment",id_00d00f2400000fd20000000000000000);
+        // attribute Operator
 
         MAttribute id_00d00f24000010040000000000000000 = new MAttribute("00d00f24-0000-1004-0000-000000000000","Operator","00d00f24-0000-0fd2-0000-000000000000.exml",this.mBaseTypes.get("InteractionOperator"),false,true,false);
         id_00d00f2400000fd20000000000000000.getMAttributes().add(id_00d00f24000010040000000000000000);
-
 
 
 
@@ -2999,7 +2977,8 @@ public class MMetamodel {
 
         MClass id_00d00f2400000fd40000000000000000 = new MClass("00d00f24-0000-0fd4-0000-000000000000","DurationConstraint","00d00f24-0000-0fd4-0000-000000000000.exml");
         id_00d00f2400000b150000000000000000.getMClass().add(id_00d00f2400000fd40000000000000000);
-        this.mClass.put("DurationConstraint",id_00d00f2400000fd40000000000000000);// attribute DurationMin
+        this.mClass.put("DurationConstraint",id_00d00f2400000fd40000000000000000);
+        // attribute DurationMin
 
         MAttribute id_00d00f24000016360000000000000000 = new MAttribute("00d00f24-0000-1636-0000-000000000000","DurationMin","00d00f24-0000-0fd4-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_00d00f2400000fd40000000000000000.getMAttributes().add(id_00d00f24000016360000000000000000);
@@ -3009,7 +2988,6 @@ public class MMetamodel {
 
         MAttribute id_00d00f240000163a0000000000000000 = new MAttribute("00d00f24-0000-163a-0000-000000000000","DurationMax","00d00f24-0000-0fd4-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_00d00f2400000fd40000000000000000.getMAttributes().add(id_00d00f240000163a0000000000000000);
-
 
 
 
@@ -3047,11 +3025,11 @@ public class MMetamodel {
 
         MClass id_00d00f2400000fde0000000000000000 = new MClass("00d00f24-0000-0fde-0000-000000000000","InteractionFragment","00d00f24-0000-0fde-0000-000000000000.exml");
         id_00d00f2400000b150000000000000000.getMClass().add(id_00d00f2400000fde0000000000000000);
-        this.mClass.put("InteractionFragment",id_00d00f2400000fde0000000000000000);// attribute LineNumber
+        this.mClass.put("InteractionFragment",id_00d00f2400000fde0000000000000000);
+        // attribute LineNumber
 
         MAttribute id_01e4048c0000000a0000000000000000 = new MAttribute("01e4048c-0000-000a-0000-000000000000","LineNumber","00d00f24-0000-0fde-0000-000000000000.exml",this.mBaseTypes.get("integer"),false,true,false);
         id_00d00f2400000fde0000000000000000.getMAttributes().add(id_01e4048c0000000a0000000000000000);
-
 
 
 
@@ -3059,7 +3037,8 @@ public class MMetamodel {
 
         MClass id_00d00f2400000fe00000000000000000 = new MClass("00d00f24-0000-0fe0-0000-000000000000","InteractionOperand","00d00f24-0000-0fe0-0000-000000000000.exml");
         id_00d00f2400000b150000000000000000.getMClass().add(id_00d00f2400000fe00000000000000000);
-        this.mClass.put("InteractionOperand",id_00d00f2400000fe00000000000000000);// attribute Guard
+        this.mClass.put("InteractionOperand",id_00d00f2400000fe00000000000000000);
+        // attribute Guard
 
         MAttribute id_00d00f24000010830000000000000000 = new MAttribute("00d00f24-0000-1083-0000-000000000000","Guard","00d00f24-0000-0fe0-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_00d00f2400000fe00000000000000000.getMAttributes().add(id_00d00f24000010830000000000000000);
@@ -3072,16 +3051,15 @@ public class MMetamodel {
 
 
 
-
         //## class InteractionUse ##
 
         MClass id_00d00f2400000fe20000000000000000 = new MClass("00d00f24-0000-0fe2-0000-000000000000","InteractionUse","00d00f24-0000-0fe2-0000-000000000000.exml");
         id_00d00f2400000b150000000000000000.getMClass().add(id_00d00f2400000fe20000000000000000);
-        this.mClass.put("InteractionUse",id_00d00f2400000fe20000000000000000);// attribute EndLineNumber
+        this.mClass.put("InteractionUse",id_00d00f2400000fe20000000000000000);
+        // attribute EndLineNumber
 
         MAttribute id_01e4048c000033930000000000000000 = new MAttribute("01e4048c-0000-3393-0000-000000000000","EndLineNumber","00d00f24-0000-0fe2-0000-000000000000.exml",this.mBaseTypes.get("integer"),false,true,false);
         id_00d00f2400000fe20000000000000000.getMAttributes().add(id_01e4048c000033930000000000000000);
-
 
 
 
@@ -3089,11 +3067,11 @@ public class MMetamodel {
 
         MClass id_00d00f2400000fe40000000000000000 = new MClass("00d00f24-0000-0fe4-0000-000000000000","Lifeline","00d00f24-0000-0fe4-0000-000000000000.exml");
         id_00d00f2400000b150000000000000000.getMClass().add(id_00d00f2400000fe40000000000000000);
-        this.mClass.put("Lifeline",id_00d00f2400000fe40000000000000000);// attribute Selector
+        this.mClass.put("Lifeline",id_00d00f2400000fe40000000000000000);
+        // attribute Selector
 
         MAttribute id_00d00f24000010930000000000000000 = new MAttribute("00d00f24-0000-1093-0000-000000000000","Selector","00d00f24-0000-0fe4-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_00d00f2400000fe40000000000000000.getMAttributes().add(id_00d00f24000010930000000000000000);
-
 
 
 
@@ -3101,7 +3079,8 @@ public class MMetamodel {
 
         MClass id_0148033c00000cce0000000000000000 = new MClass("0148033c-0000-0cce-0000-000000000000","Message","0148033c-0000-0cce-0000-000000000000.exml");
         id_00d00f2400000b150000000000000000.getMClass().add(id_0148033c00000cce0000000000000000);
-        this.mClass.put("Message",id_0148033c00000cce0000000000000000);// attribute Argument
+        this.mClass.put("Message",id_0148033c00000cce0000000000000000);
+        // attribute Argument
 
         MAttribute id_0148033c0001a5fd0000000000000000 = new MAttribute("0148033c-0001-a5fd-0000-000000000000","Argument","0148033c-0000-0cce-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000cce0000000000000000.getMAttributes().add(id_0148033c0001a5fd0000000000000000);
@@ -3117,7 +3096,6 @@ public class MMetamodel {
 
         MAttribute id_0148033c0001a5ff0000000000000000 = new MAttribute("0148033c-0001-a5ff-0000-000000000000","SortOfMessage","0148033c-0000-0cce-0000-000000000000.exml",this.mBaseTypes.get("MessageSort"),false,true,false);
         id_0148033c00000cce0000000000000000.getMAttributes().add(id_0148033c0001a5ff0000000000000000);
-
 
 
 
@@ -3143,7 +3121,8 @@ public class MMetamodel {
 
         MClass id_00d00f2400000fec0000000000000000 = new MClass("00d00f24-0000-0fec-0000-000000000000","StateInvariant","00d00f24-0000-0fec-0000-000000000000.exml");
         id_00d00f2400000b150000000000000000.getMClass().add(id_00d00f2400000fec0000000000000000);
-        this.mClass.put("StateInvariant",id_00d00f2400000fec0000000000000000);// attribute Body
+        this.mClass.put("StateInvariant",id_00d00f2400000fec0000000000000000);
+        // attribute Body
 
         MAttribute id_00d00f24000010b60000000000000000 = new MAttribute("00d00f24-0000-10b6-0000-000000000000","Body","00d00f24-0000-0fec-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_00d00f2400000fec0000000000000000.getMAttributes().add(id_00d00f24000010b60000000000000000);
@@ -3153,7 +3132,6 @@ public class MMetamodel {
 
         MAttribute id_01e4048c000033a00000000000000000 = new MAttribute("01e4048c-0000-33a0-0000-000000000000","EndLineNumber","00d00f24-0000-0fec-0000-000000000000.exml",this.mBaseTypes.get("integer"),false,true,false);
         id_00d00f2400000fec0000000000000000.getMAttributes().add(id_01e4048c000033a00000000000000000);
-
 
 
 
@@ -3250,11 +3228,11 @@ public class MMetamodel {
 
         MClass id_0148033c00000ce10000000000000000 = new MClass("0148033c-0000-0ce1-0000-000000000000","StateMachine","0148033c-0000-0ce1-0000-000000000000.exml");
         id_00d00f2400000b140000000000000000.getMClass().add(id_0148033c00000ce10000000000000000);
-        this.mClass.put("StateMachine",id_0148033c00000ce10000000000000000);// attribute Kind
+        this.mClass.put("StateMachine",id_0148033c00000ce10000000000000000);
+        // attribute Kind
 
         MAttribute id_0148033c0001bae20000000000000000 = new MAttribute("0148033c-0001-bae2-0000-000000000000","Kind","0148033c-0000-0ce1-0000-000000000000.exml",this.mBaseTypes.get("KindOfStateMachine"),false,true,false);
         id_0148033c00000ce10000000000000000.getMAttributes().add(id_0148033c0001bae20000000000000000);
-
 
 
 
@@ -3274,7 +3252,8 @@ public class MMetamodel {
 
         MClass id_0148033c00000ce50000000000000000 = new MClass("0148033c-0000-0ce5-0000-000000000000","Transition","0148033c-0000-0ce5-0000-000000000000.exml");
         id_00d00f2400000b140000000000000000.getMClass().add(id_0148033c00000ce50000000000000000);
-        this.mClass.put("Transition",id_0148033c00000ce50000000000000000);// attribute Effect
+        this.mClass.put("Transition",id_0148033c00000ce50000000000000000);
+        // attribute Effect
 
         MAttribute id_0148033c0001bf840000000000000000 = new MAttribute("0148033c-0001-bf84-0000-000000000000","Effect","0148033c-0000-0ce5-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000ce50000000000000000.getMAttributes().add(id_0148033c0001bf840000000000000000);
@@ -3302,7 +3281,6 @@ public class MMetamodel {
 
         MAttribute id_01f420d000036f240000000000000000 = new MAttribute("01f420d0-0003-6f24-0000-000000000000","PostCondition","0148033c-0000-0ce5-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_0148033c00000ce50000000000000000.getMAttributes().add(id_01f420d000036f240000000000000000);
-
 
 
 
@@ -3345,11 +3323,11 @@ public class MMetamodel {
 
         MClass id_00d0002400000c000000000000000000 = new MClass("00d00024-0000-0c00-0000-000000000000","ExtensionPoint","00d00024-0000-0c00-0000-000000000000.exml");
         id_00d00f24000009020000000000000000.getMClass().add(id_00d0002400000c000000000000000000);
-        this.mClass.put("ExtensionPoint",id_00d0002400000c000000000000000000);// attribute Visibility
+        this.mClass.put("ExtensionPoint",id_00d0002400000c000000000000000000);
+        // attribute Visibility
 
         MAttribute id_00d0002400000c190000000000000000 = new MAttribute("00d00024-0000-0c19-0000-000000000000","Visibility","00d00024-0000-0c00-0000-000000000000.exml",this.mBaseTypes.get("VisibilityMode"),false,true,false);
         id_00d0002400000c000000000000000000.getMAttributes().add(id_00d0002400000c190000000000000000);
-
 
 
 
@@ -3368,11 +3346,11 @@ public class MMetamodel {
 
         MClass id_01ec00cc00172b330000000000000000 = new MClass("01ec00cc-0017-2b33-0000-000000000000","CommunicationNode","01ec00cc-0017-2b33-0000-000000000000.exml");
         id_01ec00cc00172ace0000000000000000.getMClass().add(id_01ec00cc00172b330000000000000000);
-        this.mClass.put("CommunicationNode",id_01ec00cc00172b330000000000000000);// attribute Selector
+        this.mClass.put("CommunicationNode",id_01ec00cc00172b330000000000000000);
+        // attribute Selector
 
         MAttribute id_01ec00cc00172b810000000000000000 = new MAttribute("01ec00cc-0017-2b81-0000-000000000000","Selector","01ec00cc-0017-2b33-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_01ec00cc00172b330000000000000000.getMAttributes().add(id_01ec00cc00172b810000000000000000);
-
 
 
 
@@ -3380,7 +3358,8 @@ public class MMetamodel {
 
         MClass id_01ec00cc00172da00000000000000000 = new MClass("01ec00cc-0017-2da0-0000-000000000000","CommunicationMessage","01ec00cc-0017-2da0-0000-000000000000.exml");
         id_01ec00cc00172ace0000000000000000.getMClass().add(id_01ec00cc00172da00000000000000000);
-        this.mClass.put("CommunicationMessage",id_01ec00cc00172da00000000000000000);// attribute Argument
+        this.mClass.put("CommunicationMessage",id_01ec00cc00172da00000000000000000);
+        // attribute Argument
 
         MAttribute id_01ec00cc00172db60000000000000000 = new MAttribute("01ec00cc-0017-2db6-0000-000000000000","Argument","01ec00cc-0017-2da0-0000-000000000000.exml",this.mBaseTypes.get("string"),false,true,false);
         id_01ec00cc00172da00000000000000000.getMAttributes().add(id_01ec00cc00172db60000000000000000);
@@ -3396,7 +3375,6 @@ public class MMetamodel {
 
         MAttribute id_01ec00cc00172e1a0000000000000000 = new MAttribute("01ec00cc-0017-2e1a-0000-000000000000","SortOfMessage","01ec00cc-0017-2da0-0000-000000000000.exml",this.mBaseTypes.get("MessageSort"),false,true,false);
         id_01ec00cc00172da00000000000000000.getMAttributes().add(id_01ec00cc00172e1a0000000000000000);
-
 
 
 
@@ -7643,6 +7621,48 @@ public class MMetamodel {
     public MDataType getDataTypeByName(String name) {
 
         return this.mBaseTypes.get(name);
+    }
+
+    private void initEnum() {
+
+
+
+         // ########### Enums ###########
+
+        this.mBaseTypes.put("BpmnProcessType", new MEnum("7f718f1d-18d6-11e0-9cf7-001ec947ccaf","BpmnProcessType","enum",java.util.Arrays.asList("NoneProcess","PublicProcess","PrivateProcess")));
+        this.mBaseTypes.put("OptionalBoolean", new MEnum("5b68d75b-1982-11e0-9cf7-001ec947ccaf","OptionalBoolean","enum",java.util.Arrays.asList("OFalse","OTrue","OUndefined")));
+        this.mBaseTypes.put("BpmnAssociationDirection", new MEnum("7f78b740-18d6-11e0-9cf7-001ec947ccaf","BpmnAssociationDirection","enum",java.util.Arrays.asList("NoneDirection","OneDirection","BothDirection")));
+        this.mBaseTypes.put("AdHocOrdering", new MEnum("7f765489-18d6-11e0-9cf7-001ec947ccaf","AdHocOrdering","enum",java.util.Arrays.asList("ParallelOrdering","SequentialOrdering")));
+        this.mBaseTypes.put("MultiInstanceBehavior", new MEnum("7f765475-18d6-11e0-9cf7-001ec947ccaf","MultiInstanceBehavior","enum",java.util.Arrays.asList("NoneBehavior","OneBehavior","AllBehavior","ComplexBehavior")));
+        this.mBaseTypes.put("TransactionMethod", new MEnum("7f73f223-18d6-11e0-9cf7-001ec947ccaf","TransactionMethod","enum",java.util.Arrays.asList("compensateTransaction","storeTransaction","imageTransaction")));
+        this.mBaseTypes.put("BpmnEventBasedGatewayType", new MEnum("7f7654b1-18d6-11e0-9cf7-001ec947ccaf","BpmnEventBasedGatewayType","enum",java.util.Arrays.asList("ParallelGateway","ExclusiveGateway")));
+        this.mBaseTypes.put("BpmnGatewayDirection", new MEnum("7f7654cf-18d6-11e0-9cf7-001ec947ccaf","BpmnGatewayDirection","enum",java.util.Arrays.asList("UnspecifiedDirection","ConvergingDirection","DivergingDirection","MixedDirection")));
+        this.mBaseTypes.put("BpmnItemKind", new MEnum("7f7654c6-18d6-11e0-9cf7-001ec947ccaf","BpmnItemKind","enum",java.util.Arrays.asList("physical","information")));
+        this.mBaseTypes.put("ModuleState", new MEnum("0148033c-0000-0d27-0000-000000000000","ModuleState","enum",java.util.Arrays.asList("SoModuleStateDesactivated","SoModuleStateActivated")));
+        this.mBaseTypes.put("ModuleParameterType", new MEnum("0148033c-0001-d3a5-0000-000000000000","ModuleParameterType","enum",java.util.Arrays.asList("TYPE_PARAM_BOOLEAN","TYPE_PARAM_STRING","TYPE_PARAM_ENUM","TYPE_PARAM_FILE","TYPE_PARAM_INTEGER","TYPE_PARAM_DIRECTORY","TYPE_PARAM_PASSWORD","TYPE_PARAM_COLOR")));
+        this.mBaseTypes.put("PropertyBaseType", new MEnum("20603d99-27f1-11e2-b500-001ec947ccaf","PropertyBaseType","enum",java.util.Arrays.asList("String","Text","Boolean","Integer","Unsigned","Float","Enumerate","Date","Time","Element","Richtext")));
+        this.mBaseTypes.put("AggregationKind", new MEnum("0148033c-0000-0ca2-0000-000000000000","AggregationKind","enum",java.util.Arrays.asList("KindIsAssociation","KindIsAggregation","KindIsComposition")));
+        this.mBaseTypes.put("KindOfAccess", new MEnum("0148033c-0000-0c4e-0000-000000000000","KindOfAccess","enum",java.util.Arrays.asList("Read","Write","ReadWrite","AccesNone")));
+        this.mBaseTypes.put("MethodPassingMode", new MEnum("0148033c-0000-0c58-0000-000000000000","MethodPassingMode","enum",java.util.Arrays.asList("MethodIn","MethodOut")));
+        this.mBaseTypes.put("PassingMode", new MEnum("0148033c-0000-0c5b-0000-000000000000","PassingMode","enum",java.util.Arrays.asList("In","Out","Inout")));
+        this.mBaseTypes.put("VisibilityMode", new MEnum("0148033c-0000-0c53-0000-000000000000","VisibilityMode","enum",java.util.Arrays.asList("Public","Protected","Private","VisibilityUndefined","PackageVisibility")));
+        this.mBaseTypes.put("PortOrientation", new MEnum("f4130521-bb9f-11e1-ac85-001ec947ccaf","PortOrientation","enum",java.util.Arrays.asList("None","In","Out","Inout")));
+        this.mBaseTypes.put("Navigability", new MEnum("00886b34-4709-1081-943a-001ec947cd2a","Navigability","enum",java.util.Arrays.asList("None","ThisSide","OtherSide","BothSides")));
+        this.mBaseTypes.put("DecisionNodeKind", new MEnum("00d00f24-0000-0a96-0000-000000000000","DecisionNodeKind","enum",java.util.Arrays.asList("ComplexDecision","ExclusiveDecision","InclusiveDecision","EventBasedDecision")));
+        this.mBaseTypes.put("ExpansionKind", new MEnum("041e6c10-f878-11df-a2c5-001ec947ccaf","ExpansionKind","enum",java.util.Arrays.asList("Parallel","Iterative","Stream")));
+        this.mBaseTypes.put("ObjectFlowEffectKind", new MEnum("00d00f24-0000-0a1f-0000-000000000000","ObjectFlowEffectKind","enum",java.util.Arrays.asList("CreateFlow","ReadFlow","Updateflow","DeleteFlow","ExceptionFlow")));
+        this.mBaseTypes.put("ObjectNodeOrderingKind", new MEnum("00d00f24-0000-0cd7-0000-000000000000","ObjectNodeOrderingKind","enum",java.util.Arrays.asList("Unordered","Ordered","LIFO","FIFO")));
+        this.mBaseTypes.put("PinPassingMode", new MEnum("00d00f24-0000-0cec-0000-000000000000","PinPassingMode","enum",java.util.Arrays.asList("InPin","OutPin")));
+        this.mBaseTypes.put("ParameterEffectKind", new MEnum("00d00f24-0000-0a02-0000-000000000000","ParameterEffectKind","enum",java.util.Arrays.asList("CreateEffect","ReadEffect","UpdateEffect","DeleteEffect")));
+        this.mBaseTypes.put("EventType", new MEnum("0148033c-0000-0c82-0000-000000000000","EventType","enum",java.util.Arrays.asList("SignalEvent","CallEvent","TimeEvent","ChangeEvent")));
+        this.mBaseTypes.put("InteractionOperator", new MEnum("00d00f24-0000-0ff0-0000-000000000000","InteractionOperator","enum",java.util.Arrays.asList("SeqOp","AltOp","OptOp","BreakOp","ParOp","StrictOp","LoopOp","CriticalOp","NegOp","AssertOp","IgnoreOp","ConsiderOp")));
+        this.mBaseTypes.put("MessageKind", new MEnum("00d00f24-0000-0ff2-0000-000000000000","MessageKind","enum",java.util.Arrays.asList("CompleteKind","LostKind","FoundKind","UnknownKind")));
+        this.mBaseTypes.put("MessageSort", new MEnum("0148033c-0000-0c79-0000-000000000000","MessageSort","enum",java.util.Arrays.asList("SyncCall","ASyncCall","ASyncSignal","DestroyMessage","CreateMessage","ReturnMessage")));
+        this.mBaseTypes.put("RelativeTime", new MEnum("01ec00cc-001c-31bb-0000-000000000000","RelativeTime","enum",java.util.Arrays.asList("Before","During","After","On")));
+        this.mBaseTypes.put("KindOfControl", new MEnum("0148033c-0000-0c5f-0000-000000000000","KindOfControl","enum",java.util.Arrays.asList("If","Case")));
+        this.mBaseTypes.put("KindOfStateMachine", new MEnum("0148033c-0000-0c7f-0000-000000000000","KindOfStateMachine","enum",java.util.Arrays.asList("Dynamic","Protocol")));
+        this.mBaseTypes.put("PredefinedEventType", new MEnum("0148033c-0000-0c9e-0000-000000000000","PredefinedEventType","enum",java.util.Arrays.asList("EntryEvent","DoEvent","ExitEvent")));
+        this.mBaseTypes.put("StateKind", new MEnum("0148033c-0000-0c87-0000-000000000000","StateKind","enum",java.util.Arrays.asList("InitialState","DeepHistoryState","ShallowHistoryState","JoinState","ForkState","BranchState","OldFinalState","SignalReceiptState","SignalSendingState","SynchronizationState")));
     }
 
 }
